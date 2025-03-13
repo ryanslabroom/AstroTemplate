@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+
+import mainLogo from "../assets/logoipsum-296.svg"
+import Calender from "../assets/calendar.png"
+import "../styles/global.css";
+---
+
+<div class="flex flex-col w-full">
+
+  
+<div class="flex flex-row items-center justify-end gap-x-4 pr-64 bg-[#0834DC] text-white text-2xl min-h-16"> <!-- Schedule online, Call Icon + number -->
+  <div class="flex flex-row items-center">
+  <a class="flex items-center pr-1 pl-1 gap-x-1 bg-[#FF3B30] h-16"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
+  </div>
+  <p>727-842-4663</p>
+</div>
+
+<div class="flex flex-row items-center justify-between w-full bg-[#FAFAFA]"> <!-- Logo, Page Anchors -->
+  <div class="pl-64 pt-5 pb-5">
+    <Image src={mainLogo} height=50 alt="Company Logo"/>
+  </div>
+  
+  <div class="flex flex-row gap-x-4 pr-64 gap-x-10">
+    <a>Home</a>
+    <a>About Us</a>
+    <a>Special Offers</a>
+    <a>Meet The Team</a>
+    <a>Blog</a>
+  </div>
+</div>
+
