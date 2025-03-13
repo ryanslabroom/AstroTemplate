@@ -8,25 +8,38 @@ import "../styles/global.css";
 
 <div class="flex flex-col w-full">
 
-  
-<div class="flex flex-row items-center justify-end gap-x-4 pr-64 bg-[#0834DC] text-white text-2xl min-h-16"> <!-- Schedule online, Call Icon + number -->
+  <!-- Schedule online, Call Icon + number -->
+  <div class="flex flex-row items-center w-full 
+  xl:justify-end lg:justify-end md:justify-center sm:justify-center justify-center 
+  gap-x-4 bg-[#007dfc] text-white text-2xl min-h-16  
+  pr-0 sm:pr-0 md:pr0 lg:pr-64"> 
+
   <div class="flex flex-row items-center">
-  <a class="flex items-center pr-1 pl-1 gap-x-1 bg-[#FF3B30] h-16"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
+  <a class="flex items-center pr-1 pl-1 gap-x-1 bg-[#E63946] h-16 rounded-sm"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
   </div>
   <p>727-842-4663</p>
 </div>
+<!-- Schedule online, Call Icon + number -->
 
-<div class="flex flex-row items-center justify-between w-full bg-[#FAFAFA]"> <!-- Logo, Page Anchors -->
-  <div class="pl-64 pt-5 pb-5">
+<!-- Logo, Page Anchors -->
+<div class="flex flex-col items-center lg:flex-row lg:items-center justify-between w-full bg-[#FAFAFA]">
+  
+  <!-- Logo -->
+  <div class="pt-5 pb-5 pl-0 md:pl-0 lg:pl-64">
     <Image src={mainLogo} height=50 alt="Company Logo"/>
   </div>
-  
-  <div class="flex flex-row gap-x-4 pr-64 gap-x-10">
-    <a>Home</a>
-    <a>About Us</a>
-    <a>Special Offers</a>
-    <a>Meet The Team</a>
-    <a>Blog</a>
-  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hidden md:hidden lg:flex md:pr-32 lg:pr-64 gap-4 md:gap-x-10">
+      <a>Home</a>
+      <a>About Us</a>
+      <a>Special Offers</a>
+      <a>Meet The Team</a>
+      <a>Blog</a>
+    </div>
+  </nav>
+
 </div>
+
 
