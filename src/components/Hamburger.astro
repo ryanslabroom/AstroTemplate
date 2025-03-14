@@ -1,0 +1,28 @@
+<!-- src/components/Hamburger.astro -->
+<div class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+<style>
+  .hamburger {
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #007dfc; /* Change color as needed */
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .hamburger {
+      display: none;
+    }
+  }
+</style>

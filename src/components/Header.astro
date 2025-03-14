@@ -1,8 +1,10 @@
----
+d---
 import { Image } from 'astro:assets';
 
 import mainLogo from "../assets/logoipsum-296.svg"
 import Calender from "../assets/calendar.png"
+import Hamburger from './Hamburger.astro';
+import HamburgerMenu from './HamburgerMenu.astro';
 import "../styles/global.css";
 ---
 
@@ -15,31 +17,47 @@ import "../styles/global.css";
   pr-0 sm:pr-0 md:pr0 lg:pr-64"> 
 
   <div class="flex flex-row items-center">
-  <a class="flex items-center pr-1 pl-1 gap-x-1 bg-[#E63946] h-16 rounded-sm"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
+  <a class="text-md md:text-md lg:text-xl flex items-center pr-1 pl-1 gap-x-1 bg-[#E63946] h-16 rounded-sm"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
   </div>
-  <p>727-842-4663</p>
+  <p class="text-md md:text-md lg:text-2xl">111-222-3333</p>
 </div>
 <!-- Schedule online, Call Icon + number -->
 
 <!-- Logo, Page Anchors -->
-<div class="flex flex-col items-center lg:flex-row lg:items-center justify-between w-full bg-[#FAFAFA]">
-  
+<div class="flex flex-row justify-center md:justify-center lg:justify-between items-center w-full bg-[#FAFAFA] px-4 md:px-8 lg:px-64">
+
   <!-- Logo -->
-  <div class="pt-5 pb-5 pl-0 md:pl-0 lg:pl-64">
-    <Image src={mainLogo} height=50 alt="Company Logo"/>
+  <div class="flex justify-center md:justify-center lg:justify-start w-14 md:14 lg:14 pt-5 pb-5">
+    <Image src={mainLogo} height=50 width="200" alt="Company Logo"/>
   </div>
 
+  <!-- Hamburger Menu -->
+  <div class="flex justify-center md:justify-center lg:justify-end">
+    <Hamburger />
+  </div>
+  
   <!-- Navigation -->
-  <nav>
-    <div class="hidden md:hidden lg:flex md:pr-32 lg:pr-64 gap-4 md:gap-x-10">
-      <a>Home</a>
-      <a>About Us</a>
-      <a>Special Offers</a>
-      <a>Meet The Team</a>
-      <a>Blog</a>
-    </div>
-  </nav>
+   <nav class="hidden lg:flex gap-12 md:gap-8 text-sm md:text-md lg:text-lg font-medium">
+  <a>Home</a>
+  <a>About Us</a>
+  <a>Special Offers</a>
+  <a>Meet The Team</a>
+  <a>Blog</a>
+   </nav>
+
+</div>
+<nav>
+  <div class="nav-links hidden ">
+    <HamburgerMenu/>
+  </div>
+</nav>
+<div class="nav-links">
 
 </div>
 
+<script>
+  // Import your menu JavaScript
+  import "../scripts/menu.js";
+  // hidden md:hidden  
+</script>
 
