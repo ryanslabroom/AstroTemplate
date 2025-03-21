@@ -7,9 +7,9 @@ import GFiveStars from "../assets/G5stars.png"
 <html>
     <div class="hero-section flex justify-center align-center">
         <div class="w-3/4">
-            <h1 class="text-center text-md lg:text-8xl text-white font-bold mt-0 lg:mt-8 drop-shadow-sm lg:drop-shadow-lg ">YOUR #1 CHOICE FOR HEATING & COOLING</h1>
+            <h1 class="text-center text-md lg:text-8xl text-white font-bold mt-0 lg:mt-8 drop-shadow-sm lg:drop-shadow-lg drop-shadow-[rgba(0, 0, 0, 1) 0px 4px 8px;] ">YOUR #1 CHOICE FOR HEATING & COOLING</h1>
             <h3 class="text-center text-md lg:text-4xl text-white font-bold mt-0 lg:mt-8 drop-shadow-sm lg:drop-shadow-lg ">Serving Throughout Port Richey, FL and Surrounding Areas</h3>
-            <a class="text-white justify-center align-center text-md md:text-md font-semibold lg:text-3xl flex items-center pr-1 pl-1 gap-x-1 w-1/4 mx-auto mb-0 bg-[#007dfc] hover:bg-[#007efcd3] hover:cursor-pointer h-16 rounded-lg"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
+            <a class="text-white justify-center align-center text-md md:text-md font-semibold lg:text-3xl flex items-center pr-1 pl-1 gap-x-1 w-1/4 mx-auto mb-5 bg-[#007dfc] hover:bg-[#007efcd3] hover:cursor-pointer h-16 rounded-lg"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
           <!--  <Image src={GFiveStars} alt="Schedule Icon" width="400" class="flex items-center justify-center mx-auto drop-shadow-lg mt-0"/> -->
         </div>
       
@@ -21,11 +21,11 @@ import GFiveStars from "../assets/G5stars.png"
       background-image: url("../assets/HeroIMG.png");
       background-size: cover;
       background-position: center;
-      height: 80vh;
       border-bottom-right-radius: 33%;
       border-bottom-left-radius: 33%;
       border-bottom: 2px solid #007dfc;
-      
+      max-height: 80vh;
+      min-height: 60vh;
     }
 
     .hero-section h1 {

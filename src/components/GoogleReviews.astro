@@ -1,0 +1,109 @@
+---
+import { Image } from 'astro:assets';
+
+import Profile from "../assets/profileavatar.png"
+---
+
+<html>
+  <body>
+    <div class=" p-5 mt-10 bg-white">
+
+    <h2 class="mx-auto text-center text-6xl font-extrabold bg-gradient-to-r  from-blue-500 to-blue-800 text-transparent bg-clip-text">OVER 400+ GOOGLE REVIEWS</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8  mb-12 mt-10">
+            
+      <div class="col-span-1  bg-white  rounded-2xl p-6 flex flex-col shadow-xl hover:shadow-2xl  transform hover:scale-105 relative border-blue-300 border-2 transition duration-600 hover:bg-[#007dfc] hover-child">
+
+              <div class="flex items-center space-x-4 mb-4 ">
+                      
+                           <Image src={Profile} alt="Profile picture of User A" class="w-12 h-12 rounded-full"/>
+
+                          <div class="space-y-1">
+                            <p class="text-lg font-bold text-gray-800">Name Person</p>
+                             <div class="flex items-center space-x-0.5">
+                              <span class="text-xl text-gray-500 ">⭐⭐⭐⭐⭐</span>
+                             
+                            </div>
+                          </div>
+                     </div>
+
+                  
+                      
+          <div class="pb-4  text-gray-700 flex-1 ">
+                  <p class=" text-justify font-medium text-gray-800 mb-2 text-xl">
+                    Name our technician was amazing. Professional and answered all our questions and concerns. Very knowledgeable. Thinking we have finally found an ac company we can depend on. Thank you. Highly recommend!
+                  </p>
+                
+                   </div>
+                
+               
+          
+          </div>
+       
+       
+           <div class="col-span-1 bg-white rounded-2xl p-6 flex flex-col  shadow-xl hover:shadow-2xl transform hover:scale-105 border-blue-300 border-2 transition duration-600 hover:bg-[#007dfc] hover-child">
+
+              <div class="flex items-center space-x-4 mb-4">
+                <Image src={Profile} alt="Profile picture of User A" class="w-12 h-12 rounded-full"/>
+
+                          <div class="space-y-1">
+                            <p class="text-lg font-bold text-gray-800">Name Person</p>
+                             <div class="flex items-center space-x-0.5">
+                                <span class="text-xl text-gray-500">⭐⭐⭐⭐⭐</span>
+                             </div>
+                          </div>
+                  </div>
+
+          <div class="pb-4 text-gray-700 flex-1">
+                     <p class=" text-justify  font-medium text-xl text-gray-800 mb-2">  Once again you exceeded expectations! I called at 9 this morning and by 10:45 my AC is back on running great! Thanks Name! And thanks Name. It is such a good feeling to know there are still companies out there that really care about their customers and treat us as such.</p>
+                   
+          </div>
+
+
+
+          
+         
+        </div>
+       
+        <div class="col-span-1  bg-white  rounded-2xl p-6 flex flex-col  shadow-xl hover:shadow-2xl  transform hover:scale-105 border-blue-300 border-2 transition duration-600 hover:bg-[#007dfc] hover-child">
+
+          <div class="flex items-center space-x-4 mb-4 ">
+                  
+            <Image src={Profile} alt="Profile picture of User A" class="w-12 h-12 rounded-full"/>
+
+                      <div class="space-y-1">
+                         <p class="text-lg font-bold text-gray-800 ">Name Person</p>
+                         <div class="flex items-center space-x-0.5">
+                              <span class="text-xl text-gray-500">⭐⭐⭐⭐⭐</span>
+                          </div>
+                       </div>
+            </div>
+
+
+              <div class="pb-4  text-gray-700 flex-1 ">
+                <p class=" text-justify font-medium  text-xl text-gray-800 mb-2">   Thanks so much for getting my heat to work! We have used this company multiple times and they always fix the issue. Thanks again!
+                </p>
+                 
+              </div>
+              
+         
+       </div>
+
+
+
+</div>
+
+
+</div>
+
+
+  </body>
+
+  </html>
+
+
+  <style>
+    .hover-child:hover * {
+        color: white;
+    }
+</style>
