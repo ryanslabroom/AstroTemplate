@@ -1,8 +1,9 @@
-d---
+---
 import { Image } from 'astro:assets';
 
 import mainLogo from "../assets/logoipsum-296.svg"
 import Calender from "../assets/calendar.png"
+import Phone from "../assets/phoneicon.png"
 import Hamburger from './Hamburger.astro';
 import HamburgerMenu from './HamburgerMenu.astro';
 import "../styles/global.css";
@@ -14,17 +15,17 @@ import "../styles/global.css";
   <div class="flex flex-row items-center w-full 
   xl:justify-end lg:justify-end md:justify-center sm:justify-center justify-center 
   gap-x-4 bg-[#007dfc] text-white text-2xl min-h-16  
-  pr-0 sm:pr-0 md:pr0 lg:pr-64"> 
+  pr-0 sm:pr-0 md:pr0 lg:pr-32"> 
 
   <div class="flex flex-row items-center">
-  <a class="text-md md:text-md lg:text-xl flex items-center pr-1 pl-1 gap-x-1 bg-[#E63946] h-16 rounded-sm"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
+  <a class="text-md md:text-md lg:text-xl flex items-center pr-1 pl-1 gap-x-1 bg-[#E63946] hover:bg-[#C1272D] hover:cursor-pointer h-12 rounded-lg"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
   </div>
-  <p class="text-md md:text-md lg:text-2xl">111-222-3333</p>
+  <a class="text-md md:text-md hover:cursor-pointer flex items-center pr-1 pl-1 bg-[#0056b3] hover:bg-[#004494] rounded-lg h-12 lg:text-2xl"><Image src={Phone} alt="Schedule Icon" width="35"/>111-222-3333</a>
 </div>
 <!-- Schedule online, Call Icon + number -->
 
 <!-- Logo, Page Anchors -->
-<div class="flex flex-row justify-center md:justify-center lg:justify-between items-center w-full bg-[#FAFAFA] px-4 md:px-8 lg:px-64">
+<div class="flex flex-row justify-between md:justify-between pr:0 lg:pr-32 lg:justify-between items-center w-full bg-[#FAFAFA] px-4 md:px-8 lg:px-64">
 
   <!-- Logo -->
   <div class="flex justify-center md:justify-center lg:justify-start w-14 md:14 lg:14 pt-5 pb-5">
@@ -38,11 +39,11 @@ import "../styles/global.css";
   
   <!-- Navigation -->
    <nav class="hidden lg:flex gap-12 md:gap-8 text-sm md:text-md lg:text-lg font-medium">
-  <a>Home</a>
-  <a>About Us</a>
-  <a>Special Offers</a>
-  <a>Meet The Team</a>
-  <a>Blog</a>
+  <a class="hover:text-[#007dfc] hover:cursor-pointer">Home</a>
+  <a class="hover:text-[#007dfc] hover:cursor-pointer">Locations</a>
+  <a class="hover:text-[#007dfc] hover:cursor-pointer">Services</a>
+  <a class="hover:text-[#007dfc] hover:cursor-pointer">Meet The Team</a>
+  <a class="hover:text-[#007dfc] hover:cursor-pointer">Blog</a>
    </nav>
 
 </div>
