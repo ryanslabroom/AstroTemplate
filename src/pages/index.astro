@@ -1,16 +1,33 @@
 ---
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
+import SEO from '../components/SEO.astro'
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+import ServicePanels from '../components/ServicePanels.astro'
+import ServiceAreas from '../components/ServiceAreas.astro'
+import GoogleReviews from '../components/GoogleReviews.astro'
+import Contact from '../components/Contact.astro'
+import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 ---
 
 <Layout>
+  <SEO 
+    title="HVAC Services in Port Richey, FL | Ryan's HVAC"
+    description="Reliable HVAC repair, AC installation, and heating services in Port Richey. Locally owned and operated. Get a free estimate today!"
+    keywords="HVAC Port Richey, AC installation, heating repair, air conditioning service"
+    canonical="#"
+     ogImage="https://www.ryanshvac.com/images/ac-installation-og.jpg"
+  />
+  <Header />
+	<Hero />
+	<ServicePanels />
+	<GoogleReviews/>
+	<ServiceAreas/>
+	<Contact/>
+	<Footer/>
 </Layout>
 
-<style>
-body {
-	font-family: 'Oswald Variable', sans-serif;
-  }
-</style>
+
+
+

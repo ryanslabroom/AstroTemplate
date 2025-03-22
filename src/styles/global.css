@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  font-family: "Oswald Variable", sans-serif;
+}
+
 .nav-links {
   display: none;
 }
