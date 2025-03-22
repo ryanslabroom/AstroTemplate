@@ -1,43 +1,50 @@
 ---
 import { Image } from 'astro:assets';
-import Calender from "../assets/calendar.png"
-import GFiveStars from "../assets/G5stars.png"
+import Calender from "../assets/calendar.png";
+import GFiveStars from "../assets/G5stars.png";
 ---
 
-<html>
-    <div class="hero-section flex justify-center align-center">
-        <div class="w-3/4">
-            <h1 class="text-center text-md lg:text-8xl text-white font-bold mt-0 lg:mt-8 drop-shadow-sm lg:drop-shadow-lg drop-shadow-[rgba(0, 0, 0, 1) 0px 4px 8px;] ">YOUR #1 CHOICE FOR HEATING & COOLING</h1>
-            <h3 class="text-center text-md lg:text-4xl text-white font-bold mt-0 lg:mt-8 drop-shadow-sm lg:drop-shadow-lg ">Serving Throughout Port Richey, FL and Surrounding Areas</h3>
-            <a class="text-white justify-center align-center text-md md:text-md font-semibold lg:text-3xl flex items-center pr-1 pl-1 gap-x-1 w-1/4 mx-auto mb-5 bg-[#007dfc] hover:bg-[#007efcd3] hover:cursor-pointer h-16 rounded-lg"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
-          <!--  <Image src={GFiveStars} alt="Schedule Icon" width="400" class="flex items-center justify-center mx-auto drop-shadow-lg mt-0"/> -->
-        </div>
-      
+<div class="hero-section flex justify-center px-4">
+  <div class="w-full max-w-7xl text-center">
+
+    <!-- Main Heading -->
+    <h1 class="text-white font-bold drop-shadow-lg text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl mt-10 lg:mt-12">
+      YOUR #1 CHOICE FOR HEATING & COOLING
+    </h1>
+
+    <!-- Subheading -->
+    <h3 class="text-white font-semibold drop-shadow-md text-lg sm:text-lg md:text-2xl lg:text-3xl mt-4 lg:mt-6">
+      Serving Throughout Port Richey, FL and Surrounding Areas
+    </h3>
+
+    <!-- CTA Button -->
+    <a class="text-white bg-[#007dfc] hover:bg-[#007efcd3] font-semibold text-xl sm:text-base md:text-lg lg:text-2xl flex items-center justify-center gap-2 w-60 h-14 md:w-72 md:h-16 mx-auto mt-6 rounded-lg transition duration-300">
+      <Image src={Calender} alt="Schedule Icon" width="30" /> Schedule Online
+    </a>
+
+    <!-- Optional Star Rating (uncomment if needed) -->
+    <!--
+    <div class="mt-6">
+      <Image src={GFiveStars} alt="Google 5 Star Rating" width="250" class="mx-auto drop-shadow-lg" />
     </div>
-</html>
+    -->
+
+  </div>
+</div>
 
 <style>
-    .hero-section {
-      background-image: url("../assets/HeroIMG.png");
-      background-size: cover;
-      background-position: center;
-      border-bottom-right-radius: 33%;
-      border-bottom-left-radius: 33%;
-      border-bottom: 2px solid #007dfc;
-      max-height: 80vh;
-      min-height: 60vh;
-    }
+.hero-section {
+  background-image: url("../assets/HeroIMG.png");
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 33%;
+  border-bottom-left-radius: 33%;
+  border-bottom: 2px solid #007dfc;
+  min-height: 60vh;
+  max-height: 85vh;
+}
+</style>
 
-    .hero-section h1 {
-        
-       margin-bottom: 3%;
-    }
-
-    .hero-section h3 {
-        
-        margin-bottom: 3%;
-     }
-  </style>
 
   <script>
     
