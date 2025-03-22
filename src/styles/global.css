@@ -18,7 +18,7 @@ body {
   background-color: #007dfc; /* Make it visible */
 }
 
-.hide a {
+.hide li {
   display: flex;
   flex-direction: column;
   background-color: #007dfc;

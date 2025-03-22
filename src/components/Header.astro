@@ -8,7 +8,7 @@ import Hamburger from './Hamburger.astro';
 import HamburgerMenu from './HamburgerMenu.astro';
 import "../styles/global.css";
 ---
-
+<header>
 <div class="flex flex-col w-full">
 
   <!-- Schedule online, Call Icon + number -->
@@ -20,7 +20,7 @@ import "../styles/global.css";
   <div class="flex flex-row items-center">
   <a class="text-md md:text-md lg:text-xl flex items-center pr-1 pl-1 gap-x-1 bg-[#E63946] hover:bg-[#C1272D] hover:cursor-pointer h-12 rounded-lg"><Image src={Calender} alt="Schedule Icon" width="35"/>Schedule Online</a>
   </div>
-  <a class="text-md md:text-md hover:cursor-pointer flex items-center pr-1 pl-1 bg-[#0056b3] hover:bg-[#004494] rounded-lg h-12 lg:text-2xl"><Image src={Phone} alt="Schedule Icon" width="35"/>111-222-3333</a>
+  <a class="text-md md:text-md hover:cursor-pointer flex items-center pr-1 pl-1 bg-[#0056b3] hover:bg-[#004494] rounded-lg h-12 lg:text-2xl"><Image src={Phone} alt="Phone Icon" width="35"/>111-222-3333</a>
 </div>
 <!-- Schedule online, Call Icon + number -->
 
@@ -39,11 +39,13 @@ import "../styles/global.css";
   
   <!-- Navigation -->
    <nav class="hidden lg:flex gap-12 md:gap-8 text-sm md:text-md lg:text-lg font-medium">
-  <a class="hover:text-[#007dfc] hover:cursor-pointer">Home</a>
-  <a class="hover:text-[#007dfc] hover:cursor-pointer">Locations</a>
-  <a class="hover:text-[#007dfc] hover:cursor-pointer">Services</a>
-  <a class="hover:text-[#007dfc] hover:cursor-pointer">Meet The Team</a>
-  <a class="hover:text-[#007dfc] hover:cursor-pointer">Blog</a>
+  <ul class="hidden lg:flex gap-12 md:gap-8 text-sm md:text-md lg:text-lg font-medium">
+  <li class="hover:text-[#007dfc] hover:cursor-pointer">Home</li>
+  <li class="hover:text-[#007dfc] hover:cursor-pointer">Locations</li>
+  <li class="hover:text-[#007dfc] hover:cursor-pointer">Services</li>
+  <li class="hover:text-[#007dfc] hover:cursor-pointer">Meet The Team</li>
+  <li class="hover:text-[#007dfc] hover:cursor-pointer">Blog</li>
+  </ul>
    </nav>
 
 </div>
@@ -55,10 +57,9 @@ import "../styles/global.css";
 <div class="nav-links">
 
 </div>
-
+</header>
 <script>
   // Import your menu JavaScript
   import "../scripts/menu.js";
   // hidden md:hidden  
 </script>
-

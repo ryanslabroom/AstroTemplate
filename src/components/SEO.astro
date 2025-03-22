@@ -1,5 +1,6 @@
 ---
-// src/components/Head.astro
+// src/components/SEO.astro
+
 export interface Props {
   title: string;
   description: string;
@@ -7,17 +8,61 @@ export interface Props {
   canonical?: string;
   ogImage?: string;
   url?: string;
+  extraSchema?: any; // optional additional schema for specific pages
 }
+
 const {
   title,
   description,
   keywords,
   canonical,
-  ogImage = "https://www.ryanshvac.com/og-default.jpg", // fallback image
-  url = canonical, // default to canonical if not explicitly passed
+  ogImage = "https://www.ryanshvac.com/og-default.jpg",
+  url = canonical,
+  extraSchema
 } = Astro.props;
----
 
+// HVACBusiness Schema
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Ryan's HVAC Solutions",
+  "image": "https://www.ryanshvac.com/images/logo.png",
+  "url": url,
+  "telephone": "+1-111-222-3333",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Cool Air Ave",
+    "addressLocality": "Port Richey",
+    "addressRegion": "FL",
+    "postalCode": "34668",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.2712,
+    "longitude": -82.7193
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/ryanshvac",
+    "https://www.instagram.com/ryanshvac"
+  ],
+  "description": description
+};
+
+// Combine base and extra schema (if any)
+const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
+---
 
 <head>
   <meta charset="UTF-8" />
@@ -28,22 +73,27 @@ const {
   <meta name="generator" content={Astro.generator} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   {canonical && <link rel="canonical" href={canonical} />}
-  
-<!-- Open Graph -->
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
-{url && <meta property="og:url" content={url} />}
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Ryan's HVAC" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  {url && <meta property="og:url" content={url} />}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ryan's HVAC" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {JSON.stringify(fullSchema)}
+  </script>
 
   <title>{title}</title>
 </head>
+
 
