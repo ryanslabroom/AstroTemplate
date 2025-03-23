@@ -1,6 +1,6 @@
 ---
 // src/layouts/Layout.astro
-import "../AstroTemplate/styles/global.css";
+// import "../AstroTemplate/styles/global.css";
 ---
 <!doctype html>
 <html lang="en">
@@ -8,3 +8,7 @@ import "../AstroTemplate/styles/global.css";
     <slot />
   </body>
 </html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>
