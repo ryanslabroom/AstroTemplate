@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
-body {
-  font-family: "Oswald Variable", sans-serif;
+@font-face {
+  font-family: "Oswald Variable";
+  src: url("/fonts/OswaldVariable.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .nav-links {
