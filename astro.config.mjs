@@ -9,4 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://ryanslabroom.github.io/AstroTemplate/", //remove later
+  base: "/github-pages", //remove later
 });
