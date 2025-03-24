@@ -1,6 +1,4 @@
 ---
-// src/components/SEO.astro
-
 export interface Props {
   title: string;
   description: string;
@@ -9,6 +7,8 @@ export interface Props {
   ogImage?: string;
   url?: string;
   extraSchema?: any; // optional additional schema for specific pages
+  City?: string | string[];
+  State?: string;
 }
 
 const {
@@ -18,8 +18,21 @@ const {
   canonical,
   ogImage = "https://www.ryanshvac.com/og-default.jpg",
   url = canonical,
-  extraSchema
+  extraSchema,
+  City,
+  State
 } = Astro.props;
+
+// Normalize City to always be an array
+const cityList = Array.isArray(City) ? City : City ? [City] : [];
+
+// Generate areaServed array
+const areaServed = (cityList.length && State)
+  ? cityList.map(city => ({
+      "@type": "Place",
+      "name": `${city}, ${State}`
+    }))
+  : undefined;
 
 // HVACBusiness Schema
 const businessSchema = {
@@ -38,6 +51,7 @@ const businessSchema = {
     "postalCode": "34668",
     "addressCountry": "US"
   },
+  ...(areaServed && { areaServed }),
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 28.2712,
@@ -46,9 +60,7 @@ const businessSchema = {
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
-      ],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "08:00",
       "closes": "17:00"
     }
@@ -60,12 +72,12 @@ const businessSchema = {
   "description": description
 };
 
-// Combine base and extra schema (if any)
+// Merge optional extra schema
 const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
 ---
 
 <head>
-  <meta name="robots" content="noindex, nofollow" /> <!-- tells google to not index the site yet -->
+  <meta name="robots" content="noindex, nofollow" /> <!-- remove before going live -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content={description} />
@@ -96,5 +108,3 @@ const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
 
   <title>{title}</title>
 </head>
-
-

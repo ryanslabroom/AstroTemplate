@@ -1,0 +1,77 @@
+---
+const { HeaderOne, City, State, ParaOne, HeaderTwo, ParaTwo } = Astro.props
+---
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10">
+
+  <!-- Text Content -->
+  <div class="order-1 md:order-1">
+    <section class="mb-10">
+      <h2 class="text-4xl text-[#007dfc] text-center">{HeaderOne} in {City}, {State}</h2>
+      <p class="mt-5 text-xl font-sans text-center">{ParaOne}</p>
+    </section>
+
+    <section>
+      <h2 class="text-4xl text-[#007dfc] text-center">{HeaderTwo} in {City}, {State}</h2>
+      <p class="mt-5 text-xl font-sans text-center">{ParaTwo}</p>
+    </section>
+  </div>
+
+  <!-- Form -->
+  <div class="order-2 md:order-2 flex justify-center">
+    <form class="w-full max-w-xl px-6 bg-[#007dfc] rounded-lg text-white">
+      <h2 class="text-3xl font-bold text-center mt-5 mb-5">Fill out this form and we'll reach out.</h2>
+
+      <div class="grid grid-cols-1 gap-6">
+        <!-- Full Name -->
+        <label class="block">
+          <span class="text-white text-2xl">Full Name</span>
+          <input
+            type="text"
+            required
+            class="mt-1 block w-full rounded-md bg-white text-black border-none focus:ring-2 focus:ring-white focus:outline-none text-xl py-1 px-1"
+            placeholder="Jane Doe"
+          />
+        </label>
+
+        <!-- Phone Number -->
+        <label class="block">
+          <span class="text-white text-2xl">Phone Number</span>
+          <input
+            type="tel"
+            required
+            class="mt-1 block w-full rounded-md bg-white text-black border-none focus:ring-2 focus:ring-white focus:outline-none text-xl py-1 px-1"
+            placeholder="(123) 456-7890"
+          />
+        </label>
+
+        <!-- Email Address -->
+        <label class="block">
+          <span class="text-white text-2xl">Email Address</span>
+          <input
+            type="email"
+            required
+            class="mt-1 block w-full rounded-md bg-white text-black border-none focus:ring-2 focus:ring-white focus:outline-none text-xl py-1 px-1"
+            placeholder="jane@example.com"
+          />
+        </label>
+
+        <!-- Description -->
+        <label class="block">
+          <span class="text-white text-2xl">Tell us more about what you need</span>
+          <textarea
+            class="mt-1 block w-full rounded-md bg-white text-black border-none focus:ring-2 focus:ring-white focus:outline-none text-xl py-1 px-1"
+            rows="4"
+            placeholder="Let us know how we can help..."
+          ></textarea>
+        </label>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="mt-6 mb-6 bg-white text-[#007dfc] font-bold py-3 rounded-md text-xl hover:bg-gray-100 transition">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
