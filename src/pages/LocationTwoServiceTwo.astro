@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+import LocationHero from '../components/LocationHero.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import Header from '../components/Header.astro'
+import { Image } from 'astro:assets';
+import Placeholder from "../assets/placeholder.webp"
+import Footer from '../components/Footer.astro'
+import '@fontsource-variable/oswald';
+---
+
+<Layout>
+  <SEO 
+  slot="head"
+  title="Indoor Air Quality Services in New Port Richey, FL | Ryan's HVAC"
+  description="Breathe easier with expert indoor air quality solutions in New Port Richey. Cleaner air, fewer allergens, and a more comfortable home backed by honest local service."
+  canonical="https://www.ryanshvac.com/new-port-richey/indoor-air-quality"
+  ogImage="https://www.ryanshvac.com/images/air-quality-og.jpg"
+  City="New Port Richey"
+  State="FL"
+  services={["Indoor Air Quality Solutions"]}
+/>
+  <Header/>
+  
+  <LocationHero
+    Service="Indoor Air Quality Services in"
+    Location="New Port Richey, FL"
+  />
+
+  <ServiceSection
+  HeaderOne="Fresh, Clean Air for Your Home"
+  ParaOne="If your home feels stuffy or you're constantly dealing with allergies, your indoor air might be to blame. We help homeowners in New Port Richey get rid of hidden dust, allergens, and pollutants with air quality solutions that actually work. Whether it's installing a whole-home purifier, replacing filters, or cleaning up your ductwork, we’ll help you create a space that feels better to live in."
+
+  HeaderTwo="How Do You Know If Your Air Needs Help?"
+  ParaTwo="You might notice odors that stick around, air that feels dry or heavy, or a general feeling that your home just isn’t as fresh as it used to be. Some folks feel it in their sleep or with constant sneezing. Whatever the case, poor air quality shows up in subtle ways."
+  ParaThree="We’ll take a closer look at your setup and recommend simple ways to make your air cleaner and healthier. No pushy sales talk. No complicated systems you don’t need. Just clear advice and real solutions."
+  ParaFour="Clean air means better breathing, fewer headaches, and a home that’s more comfortable every day. If something feels off, we’ll help make it right so you can breathe easier."
+  Placeholder={Placeholder}
+  />
+  <Footer/>
+</Layout>

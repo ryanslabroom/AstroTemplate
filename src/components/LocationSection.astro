@@ -1,17 +1,17 @@
 ---
-const { HeaderOne, City, State, ParaOne, HeaderTwo, ParaTwo } = Astro.props
+const { HeaderOne, City, State, ParaOne, HeaderTwo, ParaTwo, LinkOne, LinkTwo} = Astro.props
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10">
-
+  
   <!-- Text Content -->
   <div class="order-1 md:order-1">
     <section class="mb-10">
-      <h2 class="text-4xl text-[#007dfc] text-center hover:underline hover:cursor-pointer"><a href="/AstroTemplate/LocationOneServiceOne">{HeaderOne} in {City}, {State}</a></h2>
+      <h2 class="text-4xl text-[#007dfc] text-center hover:underline font-semibold hover:cursor-pointer"><a href={LinkOne}>{HeaderOne} in {City}, {State}</a></h2>
       <p class="mt-5 text-xl font-sans text-center">{ParaOne}</p>
     </section>
 
     <section>
-      <h2 class="text-4xl text-[#007dfc] text-center hover:underline hover:cursor-pointer">{HeaderTwo} in {City}, {State}</h2>
+      <h2 class="text-4xl text-[#007dfc] text-center hover:underline font-semibold hover:cursor-pointer"><a href={LinkTwo}>{HeaderTwo} in {City}, {State}</a></h2>
       <p class="mt-5 text-xl font-sans text-center">{ParaTwo}</p>
     </section>
   </div>

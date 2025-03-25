@@ -7,17 +7,17 @@ import { Image } from 'astro:assets';
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10">
 
   <!-- Text Content in Column 1 -->
-  <div class="order-1">
+  <section class="order-1">
     <section class="mb-10">
-      <h2 class="text-4xl text-[#007dfc] text-center hover:underline hover:cursor-pointer font-semibold">{HeaderOne}</h2>
+      <h2 class="text-4xl text-[#007dfc] text-center  font-semibold">{HeaderOne}</h2>
       <p class="mt-5 text-2xl font-sans text-center">{ParaOne}</p>
 
-      <h2 class="text-4xl text-[#007dfc] text-center hover:underline hover:cursor-pointer font-semibold mt-10">{HeaderTwo}</h2>
+      <h2 class="text-4xl text-[#007dfc] text-center  font-semibold mt-10">{HeaderTwo}</h2>
       <p class="mt-5 text-2xl font-sans text-center">{ParaTwo}</p>
       <p class="mt-5 text-2xl font-sans text-center">{ParaThree}</p>
       <p class="mt-5 text-2xl font-sans text-center">{ParaFour}</p>
     </section>
-  </div>
+  </section>
 
   <!-- Right Column: Image + Contact Heading + Form -->
   <div class="order-2 flex flex-col items-center space-y-6 ">
@@ -29,11 +29,11 @@ import { Image } from 'astro:assets';
     />
 
     <!-- Contact Header -->
-    <h1 class="text-4xl md:text-5xl font-semibold text-[#007dfc] text-center">Contact Us Today</h1>
+    <h3 class="text-4xl md:text-5xl font-semibold text-[#007dfc] text-center">Contact Us Today</h3>
 
     <!-- Form -->
     <form class="w-full md:w-[90%] lg:w-[75%] bg-[#007dfc] rounded-lg text-white px-6 py-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mt-2 mb-5">Fill out this form and we'll reach out.</h2>
+      <p class="text-2xl md:text-3xl font-bold text-center mt-2 mb-5">Fill out this form and we'll reach out.</p>
 
       <div class="grid grid-cols-1 gap-6">
         <!-- Full Name -->

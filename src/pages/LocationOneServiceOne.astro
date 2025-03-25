@@ -6,13 +6,14 @@ import ServiceSection from '../components/ServiceSection.astro';
 import Header from '../components/Header.astro'
 import { Image } from 'astro:assets';
 import Placeholder from "../assets/placeholder.webp"
+import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 ---
 
 <Layout>
   <SEO slot="head"
     title="HVAC Services in Port Richey, FL | Ryan's HVAC"
-    description="Looking for reliable HVAC services in Port Richey? Our Company offers expert heating and cooling services. Call today for a free estimate!"
+    description="Expert AC installation in Port Richey. Fast, reliable service from licensed pros who put your comfort first. Get a free estimate today. Same day service."
     canonical="#"
      ogImage="https://www.ryanshvac.com/images/ac-installation-og.jpg"
      City="Port Richey"
@@ -35,4 +36,5 @@ import '@fontsource-variable/oswald';
   ParaFour="Has your electric bill jumped for no clear reason? An inefficient AC system has to work harder to cool your space, which means it uses more energy — and costs you more each month."
   Placeholder={Placeholder}
   />
+  <Footer/>
 </Layout>
