@@ -9,6 +9,7 @@ export interface Props {
   extraSchema?: any; // optional additional schema for specific pages
   City?: string | string[];
   State?: string;
+  services?: string[];
 }
 
 const {
@@ -20,7 +21,8 @@ const {
   url = canonical,
   extraSchema,
   City,
-  State
+  State,
+  services
 } = Astro.props;
 
 // Normalize City to always be an array
@@ -33,6 +35,15 @@ const areaServed = (cityList.length && State)
       "name": `${city}, ${State}`
     }))
   : undefined;
+
+// Generate makesOffer array if services exist
+const makesOffer = services?.map(service => ({
+  "@type": "Offer",
+  "itemOffered": {
+    "@type": "Service",
+    "name": service
+  }
+}));
 
 // HVACBusiness Schema
 const businessSchema = {
@@ -52,6 +63,7 @@ const businessSchema = {
     "addressCountry": "US"
   },
   ...(areaServed && { areaServed }),
+  ...(makesOffer && { makesOffer }),
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 28.2712,
