@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+import LocationHero from '../components/LocationHero.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import Header from '../components/Header.astro'
+import { Image } from 'astro:assets';
+import Placeholder from "../assets/placeholder.webp"
+import '@fontsource-variable/oswald';
+---
+
+<Layout>
+  <SEO slot="head"
+    title="HVAC Services in Port Richey, FL | Ryan's HVAC"
+    description="Looking for reliable HVAC services in Port Richey? Our Company offers expert heating and cooling services. Call today for a free estimate!"
+    canonical="#"
+     ogImage="https://www.ryanshvac.com/images/ac-installation-og.jpg"
+     City="Port Richey"
+     State="FL"
+  />
+  <Header/>
+  
+  <LocationHero
+  Service="Experts at AC Repair & Installation in"
+  Location="Port Richey, FL"
+  />
+
+  <ServiceSection
+  HeaderOne="#1 AC Repair & Installation Team in Port Richey, FL" 
+  ParaOne="Dealing with AC issues in the middle of a Florida summer? We’ve all been there — and it’s no fun. Whether your air conditioner is acting up or you're ready to upgrade to something more efficient, we’re here to help. Our team works with homeowners and small businesses across Port Richey to get cooling systems running strong again. From quick repairs to full installations, we make the process simple, honest, and stress-free. No pushy upsells, just solid work you can count on. If your AC’s not keeping up, give us a call — we’ll get you back to cool in no time."
+  HeaderTwo="When and Why It’s Time for AC Repair or Installation"
+  ParaTwo="Inconsistent Cooling: If certain rooms are cooler than others — or you’re feeling warm air blowing from the vents — your system may be struggling with airflow or refrigerant issues. This is often an early warning sign that something’s off."
+  ParaThree="Skyrocketing Energy Bills: Unusual Noises or Smells: Banging, buzzing, or grinding sounds are never normal. Neither is a musty or burning smell coming from your vents. These could indicate worn-out components, electrical problems, or mold inside the system."
+  ParaFour="Has your electric bill jumped for no clear reason? An inefficient AC system has to work harder to cool your space, which means it uses more energy — and costs you more each month."
+  Placeholder={Placeholder}
+  />
+</Layout>
