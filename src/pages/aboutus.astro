@@ -10,6 +10,8 @@ import Contact from '../components/Contact.astro'
 import Trusted from '../components/Trusted.astro'
 import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
+import MeetTheTeam from '../components/MeetTheTeam.astro';
+import AboutDescription from '../components/AboutDescription.astro';
 ---
 
 <Layout>
@@ -23,16 +25,13 @@ import '@fontsource-variable/oswald';
      State="FL"
      services={["AC Repair", "AC Installation", "Heating Repair"]}
   />
+
+  
   <Header />
-	<Hero />
-	<ServicePanels />
-  <ServiceAreas/>
-	<GoogleReviews/>
-  <Trusted/>
-	<Contact/>
+
+  <AboutDescription/>
+
+  <MeetTheTeam />
+  
 	<Footer/>
 </Layout>
-
-
-
-

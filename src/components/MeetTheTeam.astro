@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import placeholderperson from "../assets/placeholderperson.png"
+---
+
+<h2 class="text-6xl text-[#007dfc] text-center mt-10 font-semibold">Meet The Team</h2>
+<p class="text-3xl text-gray-500 text-center mt-5 mb-10">Meet Our Experienced Team of Elite Technicians</p>
+
+<section class="w-full flex justify-center px-4">
+  <div class="grid gap-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 max-w-7xl">
+    <!-- CARD START -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg max-w-sm w-full mx-auto flex flex-col">
+      <Image src={placeholderperson} height="500" alt="" class="w-full h-auto" />
+      <div class="bg-[#007dfc] p-4 flex-1 flex flex-col justify-start">
+        <p class="text-4xl text-center text-white font-semibold">Person Name</p>
+        <p class="text-2xl text-center text-gray-200 mb-4">Service Technician</p>
+        <p class="text-2xl text-white text-center break-words max-w-xs mx-auto">
+          Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        </p>
+      </div>
+    </div>
+    <!-- CARD END -->
+
+    <!-- Duplicate the above block for each team member -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg max-w-sm w-full mx-auto flex flex-col">
+      <Image src={placeholderperson} height="500" alt="" class="w-full h-auto" />
+      <div class="bg-[#007dfc] p-4 flex-1 flex flex-col justify-start">
+        <p class="text-4xl text-center text-white font-semibold">Person Name</p>
+        <p class="text-2xl text-center text-gray-200 mb-4">Service Technician</p>
+        <p class="text-2xl text-white text-center break-words max-w-xs mx-auto">
+          Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg max-w-sm w-full mx-auto flex flex-col">
+      <Image src={placeholderperson} height="500" alt="" class="w-full h-auto" />
+      <div class="bg-[#007dfc] p-4 flex-1 flex flex-col justify-start">
+        <p class="text-4xl text-center text-white font-semibold">Person Name</p>
+        <p class="text-2xl text-center text-gray-200 mb-4">Service Technician</p>
+        <p class="text-2xl text-white text-center break-words max-w-xs mx-auto">
+          Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        </p>
+      </div>
+      
+    </div>
+
+    
+  </div>
+
+  
+
+</section>
