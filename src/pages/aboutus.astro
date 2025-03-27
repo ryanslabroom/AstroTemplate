@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SEO from '../components/SEO.astro'
-import Header from '../components/Header.astro'
 import Hero from '../components/Hero.astro'
 import ServicePanels from '../components/ServicePanels.astro'
 import ServiceAreas from '../components/ServiceAreas.astro'
@@ -12,7 +11,13 @@ import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import MeetTheTeam from '../components/MeetTheTeam.astro';
 import AboutDescription from '../components/AboutDescription.astro';
+import FAQ from '../components/FAQ.astro';
+
+
 ---
+
+
+
 
 <Layout>
   <SEO slot="head"
@@ -27,11 +32,18 @@ import AboutDescription from '../components/AboutDescription.astro';
   />
 
   
-  <Header />
+  
 
   <AboutDescription/>
 
+
+  
   <MeetTheTeam />
   
+
+
+  
+</FAQ>
+
 	<Footer/>
 </Layout>

@@ -1,8 +1,23 @@
-<section class="bg-[#007dfc] py-16 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-5xl md:text-6xl text-white font-bold mb-6">About Our Team</h2>
-    <p class="text-lg md:text-2xl text-white leading-relaxed">
+---
+import { Image } from 'astro:assets';
+import Placeholder from "../assets/placeholder.webp";
+---
+
+<section class="bg-[#007dfc] py-16 px-4 flex flex-col lg:flex-row items-center lg:items-center gap-10 lg:gap-6 ">
+  <div class="max-w-4xl mx-auto text-center px-2 justify-center">
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl text-white font-bold mb-6">
+      About Our Team
+    </h2>
+    <p class="text-base sm:text-lg lg:text-2xl text-white leading-relaxed">
       Our team at Ryan’s HVAC is built on honesty, hard work, and doing things the right way. We’re a group of experienced technicians who treat every home like it’s our own. When you call us, you won’t get sales pitches or shortcuts. You’ll get real answers, clear communication, and a team that’s focused on keeping you comfortable. From the first visit to the final fix, we’re here to make sure the job gets done right and you feel good about the work we do.
     </p>
+  </div>
+
+  <div class="w-full lg:w-auto max-w-2xl px-2">
+    <Image 
+      src={Placeholder} 
+      alt="AC Unit" 
+      class="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-xl shadow-lg"
+    />
   </div>
 </section>

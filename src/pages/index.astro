@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SEO from '../components/SEO.astro'
-import Header from '../components/Header.astro'
 import Hero from '../components/Hero.astro'
 import ServicePanels from '../components/ServicePanels.astro'
 import ServiceAreas from '../components/ServiceAreas.astro'
@@ -10,6 +9,7 @@ import Contact from '../components/Contact.astro'
 import Trusted from '../components/Trusted.astro'
 import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
+import Hamburger from '../components/Hamburger.astro';
 ---
 
 <Layout>
@@ -23,11 +23,23 @@ import '@fontsource-variable/oswald';
      State="FL"
      services={["AC Repair", "AC Installation", "Heating Repair"]}
   />
-  <Header />
+ <Hamburger/>
 	<Hero />
 	<ServicePanels />
   <ServiceAreas/>
-	<GoogleReviews/>
+	<GoogleReviews
+  FullNameOne="Ryan A"
+  ReviewOne="Absolutely stellar service! Our AC stopped working during a heatwave, and they had a tech out within hours. He was super knowledgeable, walked us through everything, and got it up and running in no time. Will definitely be our go-to from now on!"
+
+  FullNameTwo="Name Two"
+  ReviewTwo="From the initial phone call to the final tune-up, everything was smooth and professional. The technician showed up on time, explained the issue clearly, and even gave us tips on extending the life of our unit. Top-notch experience!"
+
+  FullNameThree="Name Three"
+  ReviewThree="I've used this company twice now — once for heating, once for cooling — and both times have been exceptional. Friendly staff, fast service, and fair prices. It's rare to find a company this consistent. Highly recommended!"
+
+
+  
+  />
   <Trusted/>
 	<Contact/>
 	<Footer/>

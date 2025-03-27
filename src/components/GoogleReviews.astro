@@ -1,56 +1,57 @@
 ---
 import { Image } from 'astro:assets';
-
 import Profile from "../assets/profileavatar.png"
+
+const{FullNameOne, FullNameTwo, FullNameThree, ReviewOne, ReviewTwo, ReviewThree} = Astro.props
 ---
 
 
     <section class="p-5 mt-10 bg-white">
-      <h2 class="mx-auto text-center text-4xl font-extrabold bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+      <h2 class="mx-auto text-center text-6xl font-extrabold bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
         OVER 400+ GOOGLE REVIEWS
       </h2>
     
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 mt-8">
         
         <!-- Review Card 1 -->
-        <article class="bg-white rounded-xl p-4 flex flex-col shadow-lg hover:shadow-2xl transform hover:scale-105 border-blue-300 border transition duration-500 hover:bg-[#007dfc]">
+        <article class="bg-white rounded-xl p-4 flex flex-col shadow-lg hover:shadow-2xl transform hover:scale-105 border-blue-300 border transition duration-500 hover:bg-[#007dfc] hover-child">
           <div class="flex items-center space-x-3 mb-3">
             <Image src={Profile} alt="Profile picture" class="w-10 h-10 rounded-full" loading="eager"/>
             <div>
-              <p class="text-base font-bold text-gray-800">Name Person</p>
+              <p class="text-xl font-bold text-gray-800">{FullNameOne}</p>
               <span class="text-sm text-gray-500">⭐⭐⭐⭐⭐</span>
             </div>
           </div>
-          <p class="text-md text-justify text-gray-800 font-medium">
-            Name our technician was amazing. Professional and answered all our questions and concerns. Very knowledgeable. Thinking we have finally found an ac company we can depend on. Thank you. Highly recommend!
+          <p class="text-lg text-justify text-gray-800 font-medium">
+           {ReviewOne}
           </p>
         </article>
     
         <!-- Review Card 2 -->
-        <article class="bg-white rounded-xl p-4 flex flex-col shadow-lg hover:shadow-2xl transform hover:scale-105 border-blue-300 border transition duration-500 hover:bg-[#007dfc]">
+        <article class="bg-white rounded-xl p-4 flex flex-col shadow-lg hover:shadow-2xl transform hover:scale-105 border-blue-300 border transition duration-500 hover:bg-[#007dfc] hover-child">
           <div class="flex items-center space-x-3 mb-3">
             <Image src={Profile} alt="Profile picture" class="w-10 h-10 rounded-full" loading="eager"/>
             <div>
-              <p class="text-base font-bold text-gray-800">Name Person</p>
+              <p class="text-xl font-bold text-gray-800">{FullNameTwo}</p>
               <span class="text-sm text-gray-500">⭐⭐⭐⭐⭐</span>
             </div>
           </div>
-          <p class="text-md text-justify text-gray-800 font-medium">
-            Once again you exceeded expectations! I called at 9 this morning and by 10:45 my AC is back on running great! Thanks Name! And thanks Name. It is such a good feeling to know there are still companies out there that really care about their customers and treat us as such.
+          <p class="text-lg text-justify text-gray-800 font-medium">
+            {ReviewTwo}
           </p>
         </article>
     
         <!-- Review Card 3 -->
-        <article class="bg-white rounded-xl p-4 flex flex-col shadow-lg hover:shadow-2xl transform hover:scale-105 border-blue-300 border transition duration-500 hover:bg-[#007dfc]">
+        <article class="bg-white rounded-xl p-4 flex flex-col shadow-lg hover:shadow-2xl transform hover:scale-105 border-blue-300 border transition duration-500 hover:bg-[#007dfc] hover-child">
           <div class="flex items-center space-x-3 mb-3">
             <Image src={Profile} alt="Profile picture" class="w-10 h-10 rounded-full" loading="eager"/>
             <div>
-              <p class="text-base font-bold text-gray-800">Name Person</p>
+              <p class="text-xl font-bold text-gray-800">{FullNameThree}</p>
               <span class="text-sm text-gray-500">⭐⭐⭐⭐⭐</span>
             </div>
           </div>
-          <p class="text-md text-justify text-gray-800 font-medium">
-            Thanks so much for getting my heat to work! We have used this company multiple times and they always fix the issue. Thanks again!
+          <p class="text-lg text-justify text-gray-800 font-medium">
+            {ReviewThree}
           </p>
         </article>
     
