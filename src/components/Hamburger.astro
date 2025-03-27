@@ -118,3 +118,16 @@ import logoipsum from "../assets/logoipsum-296.svg";
 
   </nav>
   
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.toggle-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+  
+    if (toggleButton && mobileMenu) {
+      toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+  
+  </script>
