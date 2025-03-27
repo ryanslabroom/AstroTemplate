@@ -1,4 +1,6 @@
 ---
+import Hamburger from "../components/Hamburger.astro";
+
 // src/layouts/Layout.astro
 // import "../AstroTemplate/styles/global.css";
 ---
@@ -7,6 +9,10 @@
   <head>
     <slot name="head"/>
   </head>
+  <header>
+    <Hamburger/>
+  </header>
+  
   <body class="bg-[#E3F2FD]">
     <slot />
   </body>
