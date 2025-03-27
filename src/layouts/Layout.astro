@@ -3,6 +3,7 @@ import Hamburger from "../components/Hamburger.astro";
 
 // src/layouts/Layout.astro
 // import "../AstroTemplate/styles/global.css";
+
 ---
 <!doctype html>
 <html lang="en">
@@ -25,4 +26,10 @@ import Hamburger from "../components/Hamburger.astro";
   font-family: "Oswald Variable", sans-serif;
 }
 
+header {
+  position: sticky;
+  top:0;
+  z-index: 50;
+}
 </style>
+

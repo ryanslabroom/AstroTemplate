@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import logoipsum from "../assets/logoipsum-296.svg";
 ---
 
-<nav class="bg-white shadow-md sticky top-0 z-50">
+<nav class="bg-white shadow-md sticky top-0 z-[9999]">
     <div class="container mx-auto px-6 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">
         <Image src={logoipsum} alt="logo" class="w-10 h-10 rounded-full">
@@ -16,7 +16,9 @@ import logoipsum from "../assets/logoipsum-296.svg";
         <div class="relative group">
           <button aria-label="Services dropdown" class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md group-hover:text-blue-500 transition-colors duration-200">
             Services
-            
+            <svg class="h-5 w-5 ml-1 group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
           </button>
           <ul class="absolute hidden group-hover:block bg-white border border-gray-200 rounded shadow-md mt-0 w-64 z-50">
             <li><a href="/AstroTemplate/ServiceHighlightOne" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">AC Repair & Install</a></li>
@@ -54,7 +56,7 @@ import logoipsum from "../assets/logoipsum-296.svg";
   
         <a href="/AstroTemplate/aboutus" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">About Us</a>
         <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">Blog</a>
-  
+        <a href="/schedule" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded ...">Schedule Online</a>
         <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">111-222-3333</a>
       </div>
   
@@ -105,8 +107,9 @@ import logoipsum from "../assets/logoipsum-296.svg";
           </ul>
         </details>
   
-        <a href="#" class="text-gray-700 hover:text-blue-500">About Us</a>
+        <a href="/AstroTemplate/aboutus" class="text-gray-700 hover:text-blue-500">About Us</a>
         <a href="#" class="text-gray-700 hover:text-blue-500">Blog</a>
+        <a href="/schedule" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded text-center ...">Schedule Online</a>
         <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center">111-2222-33333</a>
       </div>
     </div>
