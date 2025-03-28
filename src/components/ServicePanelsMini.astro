@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import AcRepairIcon from "../assets/acicon.png"
+import AcRepairInverse from "../assets/aciconwhite.png"
+import Placeholder from "../assets/placeholder.webp"
+---
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10 r">
+<section>
+  <h3 class="flex justify-center text-center font-semibold text-5xl mb-4 mt-8 text-[#007dfc]">Our HVAC Services</h3>
+  <p class="flex justify-center font-medium text-center text-xl mb-6">
+    Our company is a full-service heating, ventilation, and air conditioning company.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+    <!-- Panel 1 -->
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+      <div class="flex justify-center items-center">
+        <Image src={AcRepairInverse} alt="AC repair icon inverse" class="w-12 whiteicon"/>
+        <Image src={AcRepairIcon} alt="AC repair icon" class="w-12 hover-img" loading="eager"/>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
+        <a href="/AstroTemplate/ServiceHighlightOne" class="hover:underline">AC Repair & Installation</a>
+      </h3>
+      <p class="text-gray-600 text-sm text-center">Fast, professional air conditioning services.</p>
+    </article>
+
+    <!-- Panel 2 -->
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+      <div class="flex justify-center items-center">
+        <Image src={AcRepairInverse} alt="Furnace icon inverse" class="w-12 whiteicon" loading="lazy"/>
+        <Image src={AcRepairIcon} alt="Furnace icon" class="w-12 hover-img" loading="eager"/>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
+        <a href="/AstroTemplate/ServiceHighlightTwo" class="hover:underline">Furnace & Heater Services</a>
+      </h3>
+      <p class="text-gray-600 text-sm text-center">Expert heating system repairs and replacements.</p>
+    </article>
+
+    <!-- Panel 3 -->
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+      <div class="flex justify-center items-center">
+        <Image src={AcRepairInverse} alt="Air quality icon inverse" class="w-12 whiteicon" loading="lazy"/>
+        <Image src={AcRepairIcon} alt="Air quality icon" class="w-12 hover-img" loading="eager"/>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
+        <a href="/AstroTemplate/ServiceHighlightThree" class="hover:underline">Indoor Air Quality</a>
+      </h3>
+      <p class="text-gray-600 text-sm text-center">Improve air filtration and reduce allergens.</p>
+    </article>
+
+    <!-- Panel 4 -->
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+      <div class="flex justify-center items-center">
+        <Image src={AcRepairInverse} alt="Maintenance icon inverse" class="w-12 whiteicon" loading="lazy"/>
+        <Image src={AcRepairIcon} alt="Maintenance icon" class="w-12 hover-img" loading="eager"/>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
+        <a href="/AstroTemplate/ServiceHighlightFour" class="hover:underline">HVAC Maintenance</a>
+      </h3>
+      <p class="text-gray-600 text-sm text-center">Prevent costly repairs with routine maintenance.</p>
+    </article>
+  </div>
+
+  <a class="text-white justify-center align-center text-lg sm:text-xl font-semibold w-full sm:w-2/3 md:w-1/3 mt-8 flex items-center gap-x-1 mx-auto bg-[#007dfc] hover:bg-[#007efcd3] hover:cursor-pointer h-12 rounded-lg">
+    Call Now: 111-222-3333
+  </a>
+ 
+</section>
+ <Image 
+            src={Placeholder} 
+            alt="AC Unit" 
+            class="w-full h-80 md:h-96 object-cover rounded-b-2xl"
+          />
+</div>
+
+<style>
+  .hover-child:hover > * {
+    color: white;
+  }
+
+  .hover-child:hover .hover-img {
+    display: none;
+  }
+
+  .hover-child:hover .whiteicon {
+    display: block;
+  }
+
+  .whiteicon {
+    display: none;
+  }
+
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;
+  }
+</style>

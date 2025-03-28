@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
+import ServicePanelsMini from '../components/ServicePanelsMini.astro';
+
 ---
 
 <Layout >
@@ -25,6 +27,7 @@ import ServiceList from '../components/ServiceList.astro';
   Location="New Port Richey, FL"
   />
 
+  <ServicePanelsMini/>
   <LocationSection 
   HeaderOne="HVAC Maintenance Services"
   City="New Port Richey"
@@ -34,7 +37,7 @@ import ServiceList from '../components/ServiceList.astro';
   ParaTwo="If your home feels stuffy, smells musty, or triggers your allergies, there’s a good chance your indoor air could use a boost. We help families in New Port Richey improve their air with smart solutions like high-efficiency filters, whole-home purifiers, humidity control, and duct cleaning."
   />
 
-  <ServiceList />
+
 
   <Footer/>
 </Layout>
