@@ -10,9 +10,14 @@ import Hamburger from "../components/Hamburger.astro";
   <head>
     <slot name="head"/>
   </head>
-    <Hamburger/>
+
+  
+   
  
   <body class="bg-[#E3F2FD]">
+    <header>
+      <Hamburger/>
+    </header>
     <slot />
   </body>
 </html>
@@ -25,11 +30,12 @@ import Hamburger from "../components/Hamburger.astro";
 }
 
 header {
-  position: sticky;
-  top:0;
-  z-index: 50;
+ position:fixed;
+ z-index: 50;
+ width: 100%;
 }
+
 </style>
 
-<script type="module" src="/AstroTemplate/scripts/menu.js"></script>
+
 
