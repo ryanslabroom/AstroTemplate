@@ -3,20 +3,21 @@ import { Image } from 'astro:assets';
 import AcRepairIcon from "../assets/acicon.png"
 import AcRepairInverse from "../assets/aciconwhite.png"
 import Placeholder from "../assets/placeholder.webp"
+const{ServicesTitle, ServicesDescription} = Astro.props
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10 r">
 <section>
-  <h3 class="flex justify-center text-center font-semibold text-5xl mb-4 mt-8 text-[#007dfc]">Our HVAC Services</h3>
+  <h3 class="flex justify-center text-center font-semibold text-5xl mb-4 text-[#007dfc]">{ServicesTitle}</h3>
   <p class="flex justify-center font-medium text-center text-xl mb-6">
-    Our company is a full-service heating, ventilation, and air conditioning company.
+    {ServicesDescription}
   </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
     <!-- Panel 1 -->
-    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[200px] card flex flex-col justify-center">
       <div class="flex justify-center items-center">
-        <Image src={AcRepairInverse} alt="AC repair icon inverse" class="w-12 whiteicon"/>
-        <Image src={AcRepairIcon} alt="AC repair icon" class="w-12 hover-img" loading="eager"/>
+        <Image src={AcRepairInverse} alt="AC repair icon inverse" class="w-20 whiteicon"/>
+        <Image src={AcRepairIcon} alt="AC repair icon" class="w-20 hover-img" loading="eager"/>
       </div>
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightOne" class="hover:underline">AC Repair & Installation</a>
@@ -25,10 +26,10 @@ import Placeholder from "../assets/placeholder.webp"
     </article>
 
     <!-- Panel 2 -->
-    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[200px] card flex flex-col justify-center">
       <div class="flex justify-center items-center">
-        <Image src={AcRepairInverse} alt="Furnace icon inverse" class="w-12 whiteicon" loading="lazy"/>
-        <Image src={AcRepairIcon} alt="Furnace icon" class="w-12 hover-img" loading="eager"/>
+        <Image src={AcRepairInverse} alt="Furnace icon inverse" class="w-20 whiteicon" loading="lazy"/>
+        <Image src={AcRepairIcon} alt="Furnace icon" class="w-20 hover-img" loading="eager"/>
       </div>
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightTwo" class="hover:underline">Furnace & Heater Services</a>
@@ -37,10 +38,10 @@ import Placeholder from "../assets/placeholder.webp"
     </article>
 
     <!-- Panel 3 -->
-    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[200px] card flex flex-col justify-center">
       <div class="flex justify-center items-center">
-        <Image src={AcRepairInverse} alt="Air quality icon inverse" class="w-12 whiteicon" loading="lazy"/>
-        <Image src={AcRepairIcon} alt="Air quality icon" class="w-12 hover-img" loading="eager"/>
+        <Image src={AcRepairInverse} alt="Air quality icon inverse" class="w-20 whiteicon" loading="lazy"/>
+        <Image src={AcRepairIcon} alt="Air quality icon" class="w-20 hover-img" loading="eager"/>
       </div>
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightThree" class="hover:underline">Indoor Air Quality</a>
@@ -49,10 +50,10 @@ import Placeholder from "../assets/placeholder.webp"
     </article>
 
     <!-- Panel 4 -->
-    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[130px] card flex flex-col justify-center">
+    <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-500 hover:bg-[#007dfc] hover-child h-[200px] card flex flex-col justify-center">
       <div class="flex justify-center items-center">
-        <Image src={AcRepairInverse} alt="Maintenance icon inverse" class="w-12 whiteicon" loading="lazy"/>
-        <Image src={AcRepairIcon} alt="Maintenance icon" class="w-12 hover-img" loading="eager"/>
+        <Image src={AcRepairInverse} alt="Maintenance icon inverse" class="w-20 whiteicon" loading="lazy"/>
+        <Image src={AcRepairIcon} alt="Maintenance icon" class="w-20 hover-img" loading="eager"/>
       </div>
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightFour" class="hover:underline">HVAC Maintenance</a>
@@ -69,7 +70,7 @@ import Placeholder from "../assets/placeholder.webp"
  <Image 
             src={Placeholder} 
             alt="AC Unit" 
-            class="w-full h-80 md:h-96 object-cover rounded-b-2xl"
+            class="w-full h-80 md:h-96 object-cover rounded-2xl my-auto"
           />
 </div>
 
