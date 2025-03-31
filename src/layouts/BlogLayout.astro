@@ -1,0 +1,148 @@
+---
+import Hamburger from "../components/Hamburger.astro";
+import PostHero from "../components/PostHero.astro";
+import SEO from "../components/SEO.astro";
+import '@fontsource-variable/oswald';
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO slot="head"
+    title="HVAC Services in Port Richey, FL | Ryan's HVAC"
+    description="Reliable HVAC repair, AC installation, and heating services in Port Richey. Locally owned and operated. Get a free estimate today!"
+    keywords="HVAC Port Richey, AC installation, heating repair, air conditioning service"
+    canonical="#"
+     ogImage="https://www.ryanshvac.com/images/ac-installation-og.jpg"
+     City={["Port Richey", "New Port Richey"]}
+     State="FL"
+     services={["AC Repair", "AC Installation", "Heating Repair"]}
+  />
+  </head>
+
+  <body class="blog-body">
+    <header>
+      <Hamburger />
+    </header>
+
+    <PostHero
+      HeroTitle={frontmatter.HeroTitle}
+      HeroTitleTwo={frontmatter.HeroTitleTwo}
+    />
+
+    <main class="blog-container">
+      <div class="blog-meta">
+        <p>
+          Published on <time datetime={frontmatter.pubDate}>
+            {new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time> by {frontmatter.author}
+        </p>
+      </div>
+      <article class="blog-content">
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+
+  body.blog-body {
+    background-color: #e3f2fd;
+    font-family: "Oswald Variable", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+  }
+
+  .blog-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+  }
+
+  .blog-meta {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .blog-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .blog-content h1,
+  .blog-content h2,
+  .blog-content h3 {
+    color: #0d47a1;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-content h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+
+  .blog-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .blog-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-content a {
+    color: #1565c0;
+    text-decoration: underline;
+  }
+
+  .blog-content strong {
+    font-weight: 600;
+  }
+
+  .blog-content em {
+    font-style: italic;
+  }
+
+  .blog-content blockquote {
+    border-left: 4px solid #90caf9;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+    font-style: italic;
+  }
+</style>
