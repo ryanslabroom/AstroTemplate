@@ -1,16 +1,31 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-
+// component imports
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+import Pagination from "../../components/Pagination.astro";
 import SEO from '../../components/SEO.astro'
+// utils imports
+import { formatBlogPosts } from "../../js/utils";
 import BlogHero from '../../components/BlogHero.astro'
 import Footer from '../../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import PostCard from "../../components/PostCard.astro";
+
 // <li><a href="/AstroTemplate/blog/post-1/">Post 1</a></li>
-import { formatBlogPosts } from "../../js/utils";
+
 const allPosts = await Astro.glob('./*.md')
 const formattedPosts = formatBlogPosts(allPosts);
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("./*.md");
+  const formattedPosts = formatBlogPosts(allPosts);
+
+  return paginate(formattedPosts, {
+    pageSize: 2,
+  });
+}
+
+const { page } = Astro.props;
 ---
 
 <Layout>
@@ -33,7 +48,7 @@ const formattedPosts = formatBlogPosts(allPosts);
   <section class="container mx-auto ">
     <div class="post-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
       {
-         formattedPosts.map((post) => (
+          page.data.map((post) => (
           <PostCard
             frontmatter={post.frontmatter}
             url={post.url}
@@ -42,11 +57,11 @@ const formattedPosts = formatBlogPosts(allPosts);
         ))
       }
     </div>
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 
 	<Footer/>
 </Layout>
-
 
 
 
