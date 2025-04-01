@@ -1,21 +1,17 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: "How to Choose the Right Thermostat for Your Home"
-pubDate: 2025-03-31
-description: "Learn how different types of thermostats work and which one makes the most sense for your home."
-author: "Ryans HVAC Team"
-image:
-  url: "https://example.com/images/thermostat-guide.webp"
-  alt: "Modern smart thermostat on wall"
-tags: ["thermostat", "hvac", "energy savings"]
-
-HeroTitle: "Choosing the Right Thermostat"
-HeroTitleTwo: "Comfort Starts with Control"
+title: Choose the Right Thermostat for Your Home
+pubDate: 2025-04-1
+author: Person Name
+image: { src: "/AstroTemplate//images/post-1.webp", alt: "test" }
+description: Your thermostat may seem like a small part of your HVAC system, but it plays a big role in how comfortable and efficient your home is.
+draft: false
+category: Reference Docs
 ---
 
 # How to Choose the Right Thermostat for Your Home
 
-Published on: 2025-03-31
+Published on: 2025-05-01
 
 Your thermostat may seem like a small part of your HVAC system, but it plays a big role in how comfortable and efficient your home is. Whether you are upgrading your system or just replacing an old thermostat, understanding the options can help you make the best decision for your space and your lifestyle.
 

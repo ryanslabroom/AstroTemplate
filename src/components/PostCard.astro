@@ -1,0 +1,65 @@
+---
+// library imports
+import { Image } from 'astro:assets';
+
+// component imports
+import Link from "./Link.astro";
+
+// utils imports
+import { slugify, formatDate } from "../js/utils";
+
+const { frontmatter, url, tagType } = Astro.props;
+
+const Tag = tagType;
+
+const {
+  title,
+  date,
+  //author,
+  image,
+  description,
+  //category
+} = frontmatter;
+---
+
+<article class="bg-white rounded-lg shadow hover:shadow-md transition-shadow overflow-hidden flex flex-col mt-20">
+  <header class="px-4 pt-4">
+   <!-- <a 
+     href={`/category/${slugify(category)}/`} 
+      class="inline-block text-sm font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded"
+    > 
+     {category}-->
+    </a>
+  </header>
+
+  <a href={url} class="mt-2" aria-label={`Read post: ${title}`}>
+    <Image
+      src={image?.src}
+      alt={image?.alt || title}
+      width="400"
+      height="250"
+      format="webp"
+      fit="cover"
+      quality={80}
+      class="w-full h-64 object-cover"
+    />
+  </a>
+
+  <div class="p-4 flex flex-col flex-1">
+    <Tag class="text-xl font-semibold text-gray-800 hover:text-orange-600 transition-colors">
+      <a href={url}>{title}</a>
+    </Tag>
+
+  <!--  <small class="text-sm text-gray-500 mt-1 mb-3">
+      by <a href={`/author/${slugify(author)}/`} class="underline hover:text-orange-500">{author}</a> • {formatDate(date)}
+    </small> -->
+
+    <p class="text-gray-600 mb-4 line-clamp-3">
+      {description}
+    </p>
+
+    <div class="mt-auto hover:text-orange-600 transition-colors">
+      <Link href={url} text="Read Post" style="secondary" />
+    </div>
+  </div>
+</article>

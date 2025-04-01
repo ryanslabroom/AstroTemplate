@@ -1,21 +1,17 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: "Why Changing Your Air Filter Matters More Than You Think"
-pubDate: 2025-03-31
-description: "Learn how a clean air filter keeps your HVAC system running smoothly and your indoor air healthier."
-author: "Ryans HVAC Team"
-image:
-  url: "https://example.com/images/air-filter-replacement.webp"
-  alt: "Technician holding a clean HVAC air filter"
-tags: ["air filter", "indoor air quality", "hvac maintenance"]
-
-HeroTitle: "The Power of a Clean Air Filter"
-HeroTitleTwo: "Breathe Better, Save More"
+title: Why Changing Your Air Filter Matters More Than You Think
+pubDate: 2025-04-2
+author: Person Name
+image: { src: "/AstroTemplate/images/post-2.webp", alt: "A picture of a coder" }
+description: It is easy to forget about the air filter in your HVAC system.
+draft: false
+category: Reference Docs
 ---
 
 # Why Changing Your Air Filter Matters More Than You Think
 
-Published on: 2025-03-31
+Published on: 2025-04-02
 
 It is easy to forget about the air filter in your HVAC system. It is not something you see every day and it does not make any noise when it is working. But that small filter plays a big role in keeping your air clean and your system running the way it should.
 

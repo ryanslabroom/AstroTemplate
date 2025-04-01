@@ -1,9 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
 import SEO from '../../components/SEO.astro'
 import BlogHero from '../../components/BlogHero.astro'
 import Footer from '../../components/Footer.astro'
 import '@fontsource-variable/oswald';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import PostCard from "../../components/PostCard.astro";
+// <li><a href="/AstroTemplate/blog/post-1/">Post 1</a></li>
+import { formatBlogPosts } from "../../js/utils";
+const allPosts = await Astro.glob('./*.md')
+const formattedPosts = formatBlogPosts(allPosts);
 ---
 
 <Layout>
@@ -22,11 +29,20 @@ import '@fontsource-variable/oswald';
   HeroTitle="Our Monthly Blog"
   HeroTitleTwo="Learn more about Air Conditioning Solutions"
   />
-  <ul class="text-2xl">
-    <li><a href="/AstroTemplate/blog/post-1/">Post 1</a></li>
-    <li><a href="/AstroTemplate/blog/post-2/">Post 2</a></li>
-    <li><a href="/AstroTemplate/blog/post-3/">Post 3</a></li>
-  </ul>
+  
+  <section class="container mx-auto ">
+    <div class="post-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      {
+         formattedPosts.map((post) => (
+          <PostCard
+            frontmatter={post.frontmatter}
+            url={post.url}
+            tagType="h2"
+          />
+        ))
+      }
+    </div>
+  </section>
 
 	<Footer/>
 </Layout>
