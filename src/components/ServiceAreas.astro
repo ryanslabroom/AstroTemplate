@@ -4,81 +4,70 @@ import { Image } from 'astro:assets';
 import Placeholder from "../assets/placeholder.webp"
 ---
 
-    
-    <!-- Title Section -->
-     <div class="bg-[#007dfc] pb-5" >
-    <section class="text-white text-center mt-10">
-      <h1 class="text-4xl md:text-6xl font-bold py-5">
-        We Service Port Richey, FL, and the Surrounding Areas
-      </h1>
-    </section>
+<!-- Wrapper -->
+<div class="bg-[#007dfc] pb-10 pt-16 mt-10">
 
-<!-- Services Description Section -->
-<section class="w-full mt-5  px-6 md:px-10">
-    <div class="lg:w-2/3 mx-auto text-center">
-      <p class="text-white text-lg md:text-2xl fontchange">
-        Our company provides dependable, full-service HVAC solutions for customers throughout the West Central Coast. 
-        One of our key offerings is professional air conditioning installation and maintenance. Whether you’re looking for 
-        a traditional central AC system or an energy-efficient ductless mini-split, our experienced team can help you choose 
+  <!-- Title Section -->
+  <section class="text-white text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+      We Service Port Richey, FL, and the Surrounding Areas
+    </h1>
+  </section>
+
+  <!-- Services Description Section -->
+  <section class="w-full px-6 md:px-10 mt-6">
+    <div class="lg:w-3/4 xl:w-2/3 mx-auto text-center">
+      <p class="text-white text-lg md:text-2xl leading-relaxed fontchange">
+        Our company provides dependable, full-service HVAC solutions for customers throughout the West Central Coast.
+        One of our key offerings is professional air conditioning installation and maintenance. Whether you’re looking for
+        a traditional central AC system or an energy-efficient ductless mini-split, our experienced team can help you choose
         and install the ideal cooling system...
       </p>
     </div>
   </section>
 
+  <!-- Image + Locations Section -->
+  <section class="w-full flex flex-col lg:flex-row justify-between items-start px-6 md:px-10 gap-12 mt-12">
 
-    <!-- Image and Locations Section -->
-    <section class="w-full flex flex-col lg:flex-row justify-between items-start px-6 md:px-10 gap-10 mt-10">
-      
-      <!-- Image Block -->
-      <div class="w-full lg:w-1/2 flex justify-center">
-        <div class="relative w-full md:w-4/5 shadow-2xl rounded-2xl border-4 border-white">
-          <div class="flex items-center bg-white px-4 py-3 rounded-t-2xl">
-            <p class="text-[#007dfc] text-xl md:text-2xl font-bold mx-auto">
-              (We Offer Same-Day Service!)
-            </p>
-          </div>
-          <Image 
-            src={Placeholder} 
-            alt="AC Unit" 
-            class="w-full h-80 md:h-96 object-cover rounded-b-2xl"
-          />
+    <!-- Image Block -->
+    <div class="w-full lg:w-1/2 flex justify-center">
+      <div class="relative w-full md:w-4/5 shadow-2xl rounded-2xl border-4 border-white">
+        <div class="flex items-center bg-white px-4 py-3 rounded-t-2xl">
+          <p class="text-[#007dfc] text-xl md:text-2xl font-bold mx-auto">
+            (We Offer Same-Day Service!)
+          </p>
         </div>
+        <Image 
+          src={Placeholder} 
+          alt="AC Unit" 
+          class="w-full h-80 md:h-96 object-cover rounded-b-2xl"
+        />
       </div>
+    </div>
 
-      <!-- Locations List -->
-      <section class="w-full lg:w-1/2">
-        <ul class="grid grid-cols-2 gap-y-3 text-white text-xl md:text-3xl leading-relaxed text-left sm:text-center md:text-center lg:text-left">
-          <li><a href="/AstroTemplate/LocationOne" class="hover:underline">✓ Port Richey, FL</a></li>
-          <li><a href="/AstroTemplate/LocationTwo" class="hover:underline">✓ New Port Richey, FL</a></li>
-          <li><a href="/AstroTemplate/LocationThree" class="hover:underline">✓ Trinity, FL</a></li>
-          <li><a href="/AstroTemplate/LocationFour" class="hover:underline">✓ Tarpon Springs, FL</a></li>
-          <li><a href="/AstroTemplate/LocationFive" class="hover:underline">✓ Oldsmar, FL</a></li>
-          <li><a href="/AstroTemplate/LocationSix" class="hover:underline">✓ Odessa, FL</a></li>
-          <li><a href="/AstroTemplate/LocationSeven" class="hover:underline">✓ Land O' Lakes, FL</a></li>
-          <li><a href="/AstroTemplate/LocationEight" class="hover:underline">✓ Spring Hill, FL</a></li>
-          <li><a href="/AstroTemplate/LocationNine" class="hover:underline">✓ Palm Harbor, FL</a></li>
-          <li><a href="/AstroTemplate/LocationTen" class="hover:underline">✓ Dunedin, FL</a></li>
-          <li><a href="/AstroTemplate/LocationEleven" class="hover:underline">✓ Holiday, FL</a></li>
-          <li><a href="/AstroTemplate/LocationTwelve" class="hover:underline">✓ Hudson, FL</a></li>
-        </ul>
-      </section>
-    </section>
+    <!-- Locations List -->
+    <div class="w-full lg:w-1/2">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-9 text-white text-lg md:text-2xl leading-relaxed font-medium">
+        <li><a href="/AstroTemplate/LocationOne" class="hover:underline">✓ Port Richey, FL</a></li>
+        <li><a href="/AstroTemplate/LocationTwo" class="hover:underline">✓ New Port Richey, FL</a></li>
+        <li><a href="/AstroTemplate/LocationThree" class="hover:underline">✓ Trinity, FL</a></li>
+        <li><a href="/AstroTemplate/LocationFour" class="hover:underline">✓ Tarpon Springs, FL</a></li>
+        <li><a href="/AstroTemplate/LocationFive" class="hover:underline">✓ Oldsmar, FL</a></li>
+        <li><a href="/AstroTemplate/LocationSix" class="hover:underline">✓ Odessa, FL</a></li>
+        <li><a href="/AstroTemplate/LocationSeven" class="hover:underline">✓ Land O' Lakes, FL</a></li>
+        <li><a href="/AstroTemplate/LocationEight" class="hover:underline">✓ Spring Hill, FL</a></li>
+        <li><a href="/AstroTemplate/LocationNine" class="hover:underline">✓ Palm Harbor, FL</a></li>
+        <li><a href="/AstroTemplate/LocationTen" class="hover:underline">✓ Dunedin, FL</a></li>
+        <li><a href="/AstroTemplate/LocationEleven" class="hover:underline">✓ Holiday, FL</a></li>
+        <li><a href="/AstroTemplate/LocationTwelve" class="hover:underline">✓ Hudson, FL</a></li>
+      </ul>
+    </div>
 
-    
-
+  </section>
 </div>
 
-
-
 <style>
-
-ul {
-  list-style: none;
-  
-}
-
 .fontchange {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 </style>
-

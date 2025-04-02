@@ -4,25 +4,27 @@ import Calender from "../assets/calendar.png";
 import GFiveStars from "../assets/G5stars.png";
 ---
 
-<section class="hero-section relative flex justify-center items-center px-4 min-h-[65vh]"> 
-  <!-- Overlay for text readability -->
-  <div class="absolute inset-0  z-0 rounded-b-[33%] border-b-2 border-blue-500"></div>
+<section class="hero-section relative flex justify-center items-center px-4 min-h-[65vh] max-h-[85vh] overflow-hidden"> 
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black/10 z-0 rounded-b-[33%] border-b-2 border-blue-500"></div>
 
   <div class="relative z-10 w-full max-w-7xl text-center px-4">
-    <!-- Heading -->
-    <h1 class="text-white font-extrabold drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-snug">
+    
+    <!-- Main Heading -->
+    <h1 class="text-white font-extrabold drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-6xl leading-snug tracking-tight">
       Air Conditioning & Heating Services<br class="hidden md:block" />
       in Port Richey, FL and Surrounding Areas
     </h1>
 
     <!-- Subheading -->
-    <h2 class="text-white font-medium drop-shadow-lg text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 ">
+    <h2 class="text-white font-medium drop-shadow-md text-2xl md:text-3xl lg:text-4xl mt-4">
       Free Estimates & Same-Day Service
     </h2>
 
     <!-- CTA Button -->
-    <a class="bg-[#007dfc] hover:bg-blue-600 text-white font-semibold text-base md:text-lg lg:text-xl flex items-center justify-center gap-2 w-52 h-12 md:w-64 md:h-14 mx-auto mt-6 rounded-lg transition duration-300 hover:cursor-pointer">
-      <Image src={Calender} alt="Schedule Icon" width="40" loading="eager" /> Schedule Online
+    <a class="bg-[#007dfc] hover:bg-blue-600 text-white font-semibold text-base md:text-lg lg:text-xl flex items-center justify-center gap-2 w-52 h-12 md:w-64 md:h-14 mx-auto mt-6 rounded-lg shadow-md transition duration-300">
+      <Image src={Calender} alt="Schedule Icon" width="30" height="30" loading="eager" />
+      Schedule Online
     </a>
 
     <!-- Optional: Google 5-Star Rating -->
@@ -31,6 +33,7 @@ import GFiveStars from "../assets/G5stars.png";
       <Image src={GFiveStars} alt="Google 5 Star Rating" width="250" class="mx-auto drop-shadow-lg" />
     </div>
     -->
+
   </div>
 </section>
 
@@ -41,7 +44,5 @@ import GFiveStars from "../assets/G5stars.png";
   background-position: center;
   border-bottom-right-radius: 33%;
   border-bottom-left-radius: 33%;
-  min-height: 65vh;
-  max-height: 85vh;
 }
 </style>

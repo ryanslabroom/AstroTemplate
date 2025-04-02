@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import Placeholder from "../assets/placeholder.webp"
+const { Location } = Astro.props
+---
+
+<section class="flex flex-col md:flex-row  my-10 justify-around gap-10 items-center bg-[#007dfc] text-white">
+  <div>
+    <Image src={Placeholder} alt="Placeholder" class="w-full h-80 md:h-96 object-cover" />
+  </div>
+  
+  <div>
+    <p class="text-6xl font-semibold mb-14">WORK WITH THE PROFESSIONALS</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8 text-3xl mb-10">
+      <li>Same-Day Service</li>
+      <li>Free Estimates</li>
+      <li>Customer Satisfaction Guaranteed</li>
+      <li>Worksmanship Quality</li>
+    </ul>
+    
+  </div>
+  
+</section>
+
+<style>
+  li::before {
+    content: "✓ ";
+  }
+</style>
