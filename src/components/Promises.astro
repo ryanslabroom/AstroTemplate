@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import VanPlaceholder from '../assets/VanPlaceholder.png'
+---
+
+<section class="mt-20 mb-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+
+    <!-- Info Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full lg:w-3/5">
+      
+      <!-- Card 1 -->
+      <article class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:bg-[#007dfc] flex flex-col justify-center min-h-[160px] text-center">
+        <h3 class="text-xl font-semibold text-[#007dfc] group-hover:text-white mb-2">100% Customer Satisfaction Guaranteed</h3>
+        <p class="text-gray-600 group-hover:text-white">Customers should feel confident in their AC technicians.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:bg-[#007dfc] flex flex-col justify-center min-h-[160px] text-center">
+        <h3 class="text-xl font-semibold text-[#007dfc] group-hover:text-white mb-2">Same-Day Service</h3>
+        <p class="text-gray-600 group-hover:text-white">With our easy online scheduling we can get you a technician the same day.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover:bg-[#007dfc] flex flex-col justify-center min-h-[160px] text-center">
+        <h3 class="text-xl font-semibold text-[#007dfc] group-hover:text-white mb-2">Free Estimates</h3>
+        <p class="text-gray-600 group-hover:text-white">We give free estimates for every job in our local area.</p>
+      </article>
+
+    </div>
+
+    <!-- Image (responsive below cards on mobile) -->
+    <div class="w-full lg:w-2/5 flex justify-center mt-10 lg:mt-0">
+      <Image
+        src={VanPlaceholder}
+        alt="Van"
+        class="max-w-xs sm:max-w-sm md:max-w-md w-full object-contain animate-[rollIn_1s_ease-out_forwards]"
+      />
+    </div>
+  </div>
+  <style>
+    @keyframes rollIn {
+      0% {
+        transform: translateX(100%) rotate(15deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+      }
+    }
+  </style>
+</section>
