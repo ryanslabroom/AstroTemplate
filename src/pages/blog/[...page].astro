@@ -21,7 +21,7 @@ export async function getStaticPaths({ paginate }) {
   const formattedPosts = formatBlogPosts(allPosts);
 
   return paginate(formattedPosts, {
-    pageSize: 3,
+    pageSize: 6,
   });
 }
 
@@ -45,8 +45,9 @@ const { page } = Astro.props;
   HeroTitleTwo="Learn more about Air Conditioning Solutions"
   />
   
-  <section class="container mx-auto ">
-    <div class="post-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+  <section class="container mx-auto">
+    <h3 class="text-4xl text-center mt-10">Gain Knowledge and Insight into Your Houses AC & Heating</h3>
+    <div class="post-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 mr-5 ml-5">
       {
           page.data.map((post) => (
           <PostCard
