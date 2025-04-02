@@ -7,6 +7,7 @@ import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
 import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
 <Layout>
@@ -36,11 +37,19 @@ import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeadi
 
     HeaderTwo="Breathe Cleaner with Indoor Air Quality Solutions"
     ParaTwo="If your home feels stuffy or you’re always dealing with dust, allergies, or dry air, your indoor air quality might need attention. We offer practical, effective solutions for Trinity homeowners that actually make a difference. From high-quality air purifiers and filters to duct cleaning and humidity control, we’ll help create a space that feels fresher and healthier every day."
-    
-   
   />
 
-  <GoogleReviewsWithoutHeading/>
+  <FAQ
+  questionOne="Do you guys offer same-day service?"
+  questionTwo="What is the HVAC Maintenance Plan?"
+  questionThree="Do you provide free estimates?"
+
+
+  answerOne="Yes we offer same-day service from the time you contact and schedule an appointment with us."
+  answerTwo="The HVAC Maintenance plan is a"
+  answerThree="Yes we offer free estimates with no gimmicks."
+  />
+ 
 
   <Footer/>
 </Layout>

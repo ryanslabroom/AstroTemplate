@@ -1,11 +1,27 @@
 ---
 import { Image } from 'astro:assets';
-const{Service, Location} = Astro.props
+const {Service, Location} = Astro.props;
 ---
 
-<section>
-<div class="bg-[#007dfc] w-full hero pt-10">
-    <h1 class="text-center text-white text-6xl pt-10 pb-10">{Service} {Location}</h1>
-</div>
+<section class="hero-section relative flex justify-center items-center px-4 min-h-[60vh]"> 
+  <!-- Optional overlay -->
+  <div class="absolute inset-0 bg-black/20 z-0 border-b-2 border-blue-500"></div>
+
+  <div class="relative w-full text-center px-4 z-10">
+    <h1 class="text-white font-extrabold drop-shadow-lg text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-snug">
+        {Service}<br class="hidden md:block" />
+      </h1>
+      <h2 class="text-white font-semibold drop-shadow-md text-4xl  mt-4">
+        {Location}
+      </h2>
+  </div>
 </section>
 
+<style>
+.hero-section {
+  background-image: url("../assets/ServiceHighlightHero.webp");
+  background-size: cover;
+  background-position: center;
+  
+}
+</style>

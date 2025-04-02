@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
-import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
 <Layout>
@@ -36,11 +36,19 @@ import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeadi
 
     HeaderTwo="Commercial HVAC You Can Count On"
     ParaTwo="Running a business is hard enough without worrying about the AC going out or your system underperforming. We work with offices, shops, and commercial spaces in Oldsmar to keep their HVAC systems reliable and efficient. Whether you need scheduled maintenance, urgent repairs, or a system designed to handle your building’s unique demands, we’ve got the experience to make it happen without disrupting your day-to-day."
-    
-    
   />
 
-  <GoogleReviewsWithoutHeading/>
+  <FAQ
+  questionOne="Do you guys offer same-day service?"
+  questionTwo="What is the HVAC Maintenance Plan?"
+  questionThree="Do you provide free estimates?"
+
+
+  answerOne="Yes we offer same-day service from the time you contact and schedule an appointment with us."
+  answerTwo="The HVAC Maintenance plan is a"
+  answerThree="Yes we offer free estimates with no gimmicks."
+  />
+  
 
   <Footer/>
 </Layout>

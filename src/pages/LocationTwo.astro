@@ -7,7 +7,7 @@ import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
 import ServicePanelsMini from '../components/ServicePanelsMini.astro';
-
+import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
 ---
 
 <Layout >
@@ -30,6 +30,8 @@ import ServicePanelsMini from '../components/ServicePanelsMini.astro';
   <ServicePanelsMini
   ServicesTitle="Full-Range AC Services"
   ServicesDescription="We offer free estimates & same-day service to the Port Richey area."
+  inLocation="in New Port Richey"
+  inLocationAgain="throughout New Port Richey"
   />
   <LocationSection 
   HeaderOne="HVAC Maintenance Services"
@@ -40,7 +42,14 @@ import ServicePanelsMini from '../components/ServicePanelsMini.astro';
   ParaTwo="If your home feels stuffy, smells musty, or triggers your allergies, there’s a good chance your indoor air could use a boost. We help families in New Port Richey improve their air with smart solutions like high-efficiency filters, whole-home purifiers, humidity control, and duct cleaning."
   />
 
-
+  <GoogleReviewsWithoutHeading
+  FullNameOne="Ryan was here"
+  FullNameTwo="Name Name"
+  FullNameThree="Name Name"
+  ReviewOne="Content data"
+  ReviewTwo="Great job"
+  ReviewThree="Lorem ipsum data content words"
+  />
 
   <Footer/>
 </Layout>

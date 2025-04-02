@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro';
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
+import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import ServicePanelsMini from '../components/ServicePanelsMini.astro';
 ---
 
 <Layout>
@@ -27,6 +29,13 @@ import ServiceList from '../components/ServiceList.astro';
     Location="Hudson, FL"
   />
 
+  <ServicePanelsMini
+  ServicesTitle="Full-Range AC Services"
+  ServicesDescription="We offer free estimates & same-day service to the Hudson area."
+  inLocation="in Hudson"
+  inLocationAgain="for Hudson, FL"
+  />
+
   <LocationSection 
     HeaderOne="Clean Coils Mean Better Performance"
     City="Hudson"
@@ -37,6 +46,7 @@ import ServiceList from '../components/ServiceList.astro';
     ParaTwo="If your home never feels quite right or your electric bill keeps climbing, we can help figure out what’s going on. Our energy efficiency assessments give you a clear look at how your HVAC system is doing. We’ll check airflow, insulation impact, system age, and more — and give you smart, honest recommendations to help you save money without sacrificing comfort."
   />
 
+  <GoogleReviewsWithoutHeading/>
 
   <Footer/>
 </Layout>

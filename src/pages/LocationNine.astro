@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
-import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
 <Layout>
@@ -38,7 +38,16 @@ import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeadi
     ParaTwo="The best time to fix a problem is before it starts. Our seasonal tune-ups help you stay ahead of costly surprises by checking your system before the summer heat or winter chill kicks in. We’ll clean, test, and fine-tune your HVAC to make sure it’s ready to perform when you need it most. If we spot something small, we’ll take care of it now instead of waiting for it to turn into a bigger issue later."
   />
 
-  <GoogleReviewsWithoutHeading/>
+  <FAQ
+  questionOne="Do you guys offer same-day service?"
+  questionTwo="What is the HVAC Maintenance Plan?"
+  questionThree="Do you provide free estimates?"
+
+
+  answerOne="Yes we offer same-day service from the time you contact and schedule an appointment with us."
+  answerTwo="The HVAC Maintenance plan is a"
+  answerThree="Yes we offer free estimates with no gimmicks."
+  />
 
   <Footer/>
 </Layout>

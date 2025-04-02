@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
+import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import ServicePanelsMini from '../components/ServicePanelsMini.astro';
 ---
 
 <Layout>
@@ -20,11 +22,17 @@ import ServiceList from '../components/ServiceList.astro';
     services={["HVAC Maintenance & Tune-Ups", "Heater & Furnace Repair"]}
   />
 
- 
 
   <LocationHero
     Service="HVAC Services in"
     Location="Tarpon Springs, FL"
+  />
+
+  <ServicePanelsMini
+  ServicesTitle="Full-Range AC Services"
+  ServicesDescription="We offer free estimates & same-day service to the Tarpon Springs area."
+  inLocation="in Tarpon Springs"
+  inLocationAgain="for Tarpon Springs"
   />
 
   <LocationSection 
@@ -39,7 +47,7 @@ import ServiceList from '../components/ServiceList.astro';
    
   />
 
- 
+  <GoogleReviewsWithoutHeading/>
 
   <Footer/>
 </Layout>

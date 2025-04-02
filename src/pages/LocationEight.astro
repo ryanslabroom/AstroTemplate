@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro';
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
+import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import ServicePanelsMini from '../components/ServicePanelsMini.astro';
 ---
 
 <Layout>
@@ -27,6 +29,14 @@ import ServiceList from '../components/ServiceList.astro';
     Location="Spring Hill, FL"
   />
 
+  <ServicePanelsMini
+  ServicesTitle="Full-Range AC Services"
+  ServicesDescription="We offer free estimates & same-day service to the Spring Hill area."
+  inLocation="in Spring Hill"
+  inLocationAgain="for Spring Hill"
+  />
+
+
   <LocationSection 
     HeaderOne="Upgrade to a Smarter, More Efficient System"
     City="Spring Hill"
@@ -37,6 +47,7 @@ import ServiceList from '../components/ServiceList.astro';
     ParaTwo="If your thermostat won’t respond, keeps changing settings, or never seems to match the actual temperature, you’re not alone. It’s a common problem, and one we fix all the time. Whether you need a quick repair or want to upgrade to a newer model, we’ll make sure your home stays comfortable and easy to control. We’ll even help you choose a smart thermostat if you're ready to take full control of your system."
   />
 
+  <GoogleReviewsWithoutHeading/>
 
   <Footer/>
 </Layout>

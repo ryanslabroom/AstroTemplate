@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
-import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
 <Layout>
@@ -38,7 +38,16 @@ import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeadi
     ParaTwo="Sometimes your system is fine but your thermostat is throwing things off. Maybe one room is freezing while another feels warm, or your system keeps cycling on and off. We offer thermostat calibration in Holiday to help even things out. We’ll make sure your system responds the way it should and keeps every part of your home feeling just right."
   />
 
-  <GoogleReviewsWithoutHeading/>
+  <FAQ
+  questionOne="Do you guys offer same-day service?"
+  questionTwo="What is the HVAC Maintenance Plan?"
+  questionThree="Do you provide free estimates?"
+
+
+  answerOne="Yes we offer same-day service from the time you contact and schedule an appointment with us."
+  answerTwo="The HVAC Maintenance plan is a"
+  answerThree="Yes we offer free estimates with no gimmicks."
+  />
 
   <Footer/>
 </Layout>

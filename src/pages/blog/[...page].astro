@@ -21,7 +21,7 @@ export async function getStaticPaths({ paginate }) {
   const formattedPosts = formatBlogPosts(allPosts);
 
   return paginate(formattedPosts, {
-    pageSize: 2,
+    pageSize: 3,
   });
 }
 
@@ -30,7 +30,7 @@ const { page } = Astro.props;
 
 <Layout>
   <SEO slot="head"
-    title="HVAC Services in Port Richey, FL | Ryan's HVAC"
+    title="Our Blog | Ryan's HVAC"
     description="Reliable HVAC repair, AC installation, and heating services in Port Richey. Locally owned and operated. Get a free estimate today!"
     keywords="HVAC Port Richey, AC installation, heating repair, air conditioning service"
     canonical="#"

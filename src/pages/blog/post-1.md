@@ -6,7 +6,11 @@ author: Person Name
 image: { src: "/AstroTemplate//images/post-1.webp", alt: "test" }
 description: Your thermostat may seem like a small part of your HVAC system, but it plays a big role in how comfortable and efficient your home is.
 draft: false
-category: Reference Docs
+category: Thermostats
+services:
+  - Thermostat Installation
+  - Thermostat Repair
+  - Smart Thermostat
 ---
 
 # How to Choose the Right Thermostat for Your Home

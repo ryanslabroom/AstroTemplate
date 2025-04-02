@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
-import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
 <Layout >
@@ -38,7 +38,16 @@ import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeadi
   />
 
   
-  <GoogleReviewsWithoutHeading/>
+  <FAQ
+  questionOne="Do you guys offer same-day service?"
+  questionTwo="What is the HVAC Maintenance Plan?"
+  questionThree="Do you provide free estimates?"
+
+
+  answerOne="Yes we offer same-day service from the time you contact and schedule an appointment with us."
+  answerTwo="The HVAC Maintenance plan is a"
+  answerThree="Yes we offer free estimates with no gimmicks."
+  />
   
 
   <Footer/>

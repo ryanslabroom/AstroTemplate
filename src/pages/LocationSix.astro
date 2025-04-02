@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro'
 import '@fontsource-variable/oswald';
 import LocationSection from '../components/LocationSection.astro';
 import ServiceList from '../components/ServiceList.astro';
+import GoogleReviewsWithoutHeading from '../components/GoogleReviewsWithoutHeading.astro';
+import ServicePanelsMini from '../components/ServicePanelsMini.astro';
 ---
 
 <Layout>
@@ -27,6 +29,14 @@ import ServiceList from '../components/ServiceList.astro';
     Location="Odessa, FL"
   />
 
+
+  <ServicePanelsMini
+  ServicesTitle="Full-Range AC Services"
+  ServicesDescription="We offer free estimates & same-day service to the Odessa area."
+  inLocation="in Odessa"
+  inLocationAgain="for Odessa"
+  />
+
   <LocationSection 
     HeaderOne="Emergency HVAC Repair When You Need It Most"
     City="Odessa"
@@ -39,7 +49,7 @@ import ServiceList from '../components/ServiceList.astro';
 
   />
 
-
+  <GoogleReviewsWithoutHeading/>
 
   <Footer/>
 </Layout>

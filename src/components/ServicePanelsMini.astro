@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import AcRepairIcon from "../assets/acicon.png"
 import AcRepairInverse from "../assets/aciconwhite.png"
 import Placeholder from "../assets/placeholder.webp"
-const{ServicesTitle, ServicesDescription} = Astro.props
+const{ServicesTitle, ServicesDescription, inLocation, inLocationAgain} = Astro.props
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10 r">
 <section>
@@ -22,7 +22,7 @@ const{ServicesTitle, ServicesDescription} = Astro.props
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightOne" class="hover:underline">AC Repair & Installation</a>
       </h3>
-      <p class="text-gray-600 text-sm text-center">Fast, professional air conditioning services.</p>
+      <p class="text-gray-600 text-sm text-center">Fast, professional air conditioning services {inLocationAgain}.</p>
     </article>
 
     <!-- Panel 2 -->
@@ -34,7 +34,7 @@ const{ServicesTitle, ServicesDescription} = Astro.props
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightTwo" class="hover:underline">Furnace & Heater Services</a>
       </h3>
-      <p class="text-gray-600 text-sm text-center">Expert heating system repairs and replacements.</p>
+      <p class="text-gray-600 text-sm text-center">Expert heating system repairs and replacements {inLocation}.</p>
     </article>
 
     <!-- Panel 3 -->
@@ -46,7 +46,7 @@ const{ServicesTitle, ServicesDescription} = Astro.props
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightThree" class="hover:underline">Indoor Air Quality</a>
       </h3>
-      <p class="text-gray-600 text-sm text-center">Improve air filtration and reduce allergens.</p>
+      <p class="text-gray-600 text-sm text-center">Improve air filtration and reduce allergens {inLocation}.</p>
     </article>
 
     <!-- Panel 4 -->
@@ -58,7 +58,7 @@ const{ServicesTitle, ServicesDescription} = Astro.props
       <h3 class="text-lg font-semibold text-gray-800 text-center mt-2">
         <a href="/AstroTemplate/ServiceHighlightFour" class="hover:underline">HVAC Maintenance</a>
       </h3>
-      <p class="text-gray-600 text-sm text-center">Prevent costly repairs with routine maintenance.</p>
+      <p class="text-gray-600 text-sm text-center">Prevent costly repairs with routine maintenance {inLocationAgain}.</p>
     </article>
   </div>
 
