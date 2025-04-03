@@ -7,6 +7,8 @@ image: { src: "/AstroTemplate/images/post-2.webp", alt: "A picture of a coder" }
 description: It is easy to forget about the air filter in your HVAC system.
 draft: false
 category: Reference Docs
+HeroTitle: We Service Trinity & Surrounding Areas
+HeroTitleTwo: Get Same-Day Service & Free Estimates
 ---
 
 # Why Changing Your Air Filter Matters More Than You Think

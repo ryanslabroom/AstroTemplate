@@ -11,6 +11,8 @@ services:
   - Thermostat Installation
   - Thermostat Repair
   - Smart Thermostat
+HeroTitle: We Service Trinity & Surrounding Areas
+HeroTitleTwo: Get Same-Day Service & Free Estimates
 ---
 
 # How to Choose the Right Thermostat for Your Home

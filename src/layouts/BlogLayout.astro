@@ -2,6 +2,7 @@
 import Hamburger from "../components/Hamburger.astro";
 import PostHero from "../components/PostHero.astro";
 import SEO from "../components/SEO.astro";
+import SideScreenPromo from "../components/SideScreenPromo.astro";
 import '@fontsource-variable/oswald';
 
 const { frontmatter } = Astro.props;
@@ -25,12 +26,12 @@ const { frontmatter } = Astro.props;
     <header>
       <Hamburger />
     </header>
-
+ 
     <PostHero
       HeroTitle={frontmatter.HeroTitle}
       HeroTitleTwo={frontmatter.HeroTitleTwo}
     />
-
+    <SideScreenPromo/>
     <main class="blog-container">
       <div class="blog-meta">
         <p>
