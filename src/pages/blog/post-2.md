@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: Why Changing Your Air Filter Matters More Than You Think
 pubDate: 2025-04-2
 author: Person Name
-image: { src: "/AstroTemplate/images/post-2.webp", alt: "A picture of a coder" }
+image: { src: "/AstroTemplate/images/acOpen.JPEG", alt: "AC unit being repaired" }
 description: It is easy to forget about the air filter in your HVAC system.
 draft: false
 category: Reference Docs

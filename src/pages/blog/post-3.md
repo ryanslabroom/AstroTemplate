@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: When Is It Time for AC Maintenance?
 pubDate: 2025-03-31
 author: Person Name
-image: { src: "/AstroTemplate/images/post-3.webp", alt: "A picture of a coder" }
+image: { src: "/AstroTemplate/images/acOpen.JPEG", alt: "AC unit being repaired" }
 description: Your air conditioning system works hard, especially during the hotter months.
 draft: false
 category: Informative
