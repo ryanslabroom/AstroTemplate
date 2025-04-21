@@ -7,6 +7,8 @@ image: { src: "/AstroTemplate/images/acOpen.JPEG", alt: "AC unit being repaired"
 description: Your air conditioning system works hard, especially during the hotter months.
 draft: false
 category: Informative
+HeroTitle: We Service Trinity & Surrounding Areas
+HeroTitleTwo: Get Same-Day Service & Free Estimates
 ---
 
 # When Is It Time for AC Maintenance?

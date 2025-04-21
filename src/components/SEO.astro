@@ -49,14 +49,14 @@ const makesOffer = services?.map(service => ({
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "HVACBusiness",
-  "name": "Ryan's HVAC Solutions",
+  "name": "Farrell Air Conditioning",
   "image": "https://www.ryanshvac.com/images/logo.png",
   "url": url,
-  "telephone": "+1-111-222-3333",
+  "telephone": "+1-727-327-7355",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Cool Air Ave",
+    "streetAddress": "6840 Commerce Ave",
     "addressLocality": "Port Richey",
     "addressRegion": "FL",
     "postalCode": "34668",
@@ -66,8 +66,8 @@ const businessSchema = {
   ...(makesOffer && { makesOffer }),
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 28.2712,
-    "longitude": -82.7193
+    "latitude": 28.2794,
+    "longitude": -82.7011
   },
   "openingHoursSpecification": [
     {
@@ -78,8 +78,7 @@ const businessSchema = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/ryanshvac",
-    "https://www.instagram.com/ryanshvac"
+    "https://www.facebook.com/Farrellair/"
   ],
   "description": description
 };
