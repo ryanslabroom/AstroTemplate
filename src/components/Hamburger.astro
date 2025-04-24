@@ -8,7 +8,7 @@ import logoipsum from "../assets/FAC.png";
 <nav class="bg-white shadow-md top-0 z-[9999] w-full">
     <div class="container mx-auto px-6 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">
-        <Image src={logoipsum} alt="logo" class="w-30 lg:w-60  ml-0 lg:ml-25">
+        <Image src={logoipsum} alt="logo" class="w-24 sm:w-28 md:w-32 lg:w-48 xl:w-60 ml-0" />
       </a>
   
       <div class="hidden lg:flex lg:items-center lg:space-x-6">
@@ -56,14 +56,38 @@ import logoipsum from "../assets/FAC.png";
           </ul>
         </div>
   
+        <!--Start of Housecallpro Online booking button--> 
+
+
         <a href="/AstroTemplate/aboutus" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">About Us</a>
         <a href="/AstroTemplate/blog" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">Blog</a>
-        <a href="/schedule" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded ...">Schedule Online</a>
+        <button 
+  data-token="4982eb3dab704c61a81dd0bf9f99ec4c" 
+  data-orgname="Farrell-Air-Conditioning" 
+  onClick="HCPWidget.openModal()"
+  class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded shadow-md transition duration-300 ease-in-out hover:cursor-pointer"
+>
+  Book Online
+</button>
+
+<script async src="https://online-booking.housecallpro.com/script.js?token=4982eb3dab704c61a81dd0bf9f99ec4c&orgName=Farrell-Air-Conditioning"></script>
         <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 mr-25">727-327-7355</a>
       </div>
   
       <!-- Mobile Toggle -->
-      <a href="#" class="bg-red-500 hover:bg-red-600 text-white py-1 px-4 rounded text-center text-xl md:hidden lg:hidden xl:hidden">Book Online Now</a>
+      <button 
+  data-token="4982eb3dab704c61a81dd0bf9f99ec4c" 
+  data-orgname="Farrell-Air-Conditioning" 
+  onClick="HCPWidget.openModal()" 
+  class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded shadow-md text-md text-center w-2/4 transition duration-300 ease-in-out md:hidden lg:hidden xl:hidden"
+>
+  Book Online Now
+</button>
+
+<script 
+  async 
+  src="https://online-booking.housecallpro.com/script.js?token=4982eb3dab704c61a81dd0bf9f99ec4c&orgName=Farrell-Air-Conditioning">
+</script>
       <div class="lg:hidden flex items-center">
         
         <button aria-label="toggle menu button" class="p-2 text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md toggle-menu-button">
@@ -113,7 +137,19 @@ import logoipsum from "../assets/FAC.png";
 
     <a href="/AstroTemplate/aboutus" class="text-gray-700 hover:text-blue-500 inline-block mx-auto">About Us</a>
     <a href="/AstroTemplate/blog" class="text-gray-700 hover:text-blue-500 inline-block mx-auto">Blog</a>
-    <a href="/schedule" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded inline-block mx-auto">Schedule Online</a>
+    <button 
+  data-token="4982eb3dab704c61a81dd0bf9f99ec4c" 
+  data-orgname="Farrell-Air-Conditioning" 
+  onClick="HCPWidget.openModal()" 
+  class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded shadow-md transition duration-300 ease-in-out w-2/4 mx-auto text-center"
+>
+  Book Online
+</button>
+
+<script 
+  async 
+  src="https://online-booking.housecallpro.com/script.js?token=4982eb3dab704c61a81dd0bf9f99ec4c&orgName=Farrell-Air-Conditioning">
+</script>
     <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded inline-block mx-auto">727-327-7355</a>
   </div>
 </div>
