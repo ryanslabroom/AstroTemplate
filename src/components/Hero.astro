@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Calender from "../assets/calendar.png";
 import GFiveStars from "../assets/G5stars.png";
-import HeroIMG from "../assets/HeroIMG.webp"; // 👈 ADD THIS
+
 ---
 
 <section class="hero-section relative flex justify-center items-center px-4 min-h-[65vh] max-h-[85vh] overflow-hidden pt-20 md:pt-0"> 
@@ -41,9 +41,9 @@ import HeroIMG from "../assets/HeroIMG.webp"; // 👈 ADD THIS
   </div>
 </section>
 
-<style define:vars={{ heroImageUrl: HeroIMG.src }}>
+<style>
   .hero-section {
-    background-image: url(var(--heroImageUrl));
+    background-image: url("/images/HeroIMG.webp");
     background-size: cover;
     background-position: center;
     border-bottom-right-radius: 33%;
