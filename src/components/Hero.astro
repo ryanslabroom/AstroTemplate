@@ -23,11 +23,18 @@ import GFiveStars from "../assets/G5stars.png";
 
     <!-- CTA Button -->
     <button 
-      id="hcp-booking-button"
-      class="bg-red-600 hover:bg-red-700 text-white font-semibold text-base md:text-lg lg:text-xl flex items-center justify-center gap-2 w-52 h-12 md:w-64 md:h-14 mx-auto mt-6 rounded-lg shadow-md transition duration-300 ease-in-out"
-    >
-      Schedule Online
-    </button>
+  data-token="4982eb3dab704c61a81dd0bf9f99ec4c" 
+  data-orgname="Farrell-Air-Conditioning" 
+  onClick="HCPWidget.openModal()" 
+  class="bg-red-600 hover:bg-red-700 text-white font-semibold text-base md:text-lg lg:text-xl flex items-center justify-center gap-2 w-52 h-12 md:w-64 md:h-14 mx-auto mt-6 rounded-lg shadow-md transition duration-300 ease-in-out"
+>
+
+  Schedule Online
+</button>
+
+<script  
+  src="https://online-booking.housecallpro.com/script.js?token=4982eb3dab704c61a81dd0bf9f99ec4c&orgName=Farrell-Air-Conditioning">
+</script>
 
     <!-- Optional: Google 5-Star Rating -->
     <!--
@@ -39,26 +46,6 @@ import GFiveStars from "../assets/G5stars.png";
   </div>
 </section>
 
-<!-- Lazy Load Script -->
-<script>
-  const bookingButton = document.getElementById('hcp-booking-button');
-  let hcpScriptLoaded = false;
-
-  bookingButton.addEventListener('click', () => {
-    if (!hcpScriptLoaded) {
-      const script = document.createElement('script');
-      script.src = "https://online-booking.housecallpro.com/script.js?token=4982eb3dab704c61a81dd0bf9f99ec4c&orgName=Farrell-Air-Conditioning";
-      script.onload = () => {
-        HCPWidget.openModal();
-      };
-      document.body.appendChild(script);
-      hcpScriptLoaded = true;
-    } else {
-      HCPWidget.openModal();
-    }
-  });
-</script>
-
 <style>
 .hero-section {
   background-image: url("/images/HeroIMG.webp");
@@ -66,6 +53,6 @@ import GFiveStars from "../assets/G5stars.png";
   background-position: center;
   border-bottom-right-radius: 33%;
   border-bottom-left-radius: 33%;
-  opacity: 1;
+  opacity:1;
 }
 </style>
