@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: Choose the Right Thermostat for Your Home
 pubDate: 2025-04-1
 author: Person Name
-image: { src: "/AstroTemplate//images/acOpen.JPEG", alt: "AC unit being repaired" }
+image: { src: "/images/acOpen.JPEG", alt: "AC unit being repaired" }
 description: Your thermostat may seem like a small part of your HVAC system, but it plays a big role in how comfortable and efficient your home is.
 draft: false
 category: Thermostats
