@@ -8,6 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://ryanslabroom.github.io/AstroTemplate/", //remove later
-  base: "/AstroTemplate",
+  // Remove these lines if only deploying to Netlify
+  // site: "<https://ryanslabroom.github.io/AstroTemplate/",>
+  // base: "/AstroTemplate",
 });
