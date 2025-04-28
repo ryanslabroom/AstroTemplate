@@ -1,17 +1,97 @@
-<section>
-  <h2 class="flex justify-center text-center font-semibold text-5xl mb-5 mt-10 text-[#08439d]">Contact Us Today</h2>
-  <p class="flex justify-center font-medium text-center text-2xl mb-10">Our company offers free estimates and same-day service.</p>
+---
+--- // No frontmatter imports needed for this component
+---
 
-  <div class="flex flex-row justify-center">
-    <a class="text-white justify-center align-center  text-lg lg:text-3xl text-center font-semibold w-full sm:w-full md:w-1/4 lg:w-1/5 mt-5 flex items-center pr-1 pl-1 py-1 lg:py-10 mr-1 md:mr-3 lg:mr-5 bg-[#08439d] hover:bg-[#08439d] hover:cursor-pointer h-16 rounded-lg">Call Now: </br>727-327-7355</br></a>
-    <a class="text-white justify-center align-center text-xl lg:text-3xl font-semibold w-full sm:w-full md:w-1/4 lg:w-1/5 mt-5 flex items-center pr-1 pl-1 py-1 lg:py-10 ml-1 md:ml-3 lg:ml-5 bg-[#08439d] hover:bg-[#08439d] hover:cursor-pointer h-16 rounded-lg">Book Online</a>
+<section class="text-center mt-10">
+  <!-- Heading -->
+  <h2 class="text-5xl font-semibold text-[#08439d] mb-5">Contact Us Today</h2>
+  <p class="text-2xl font-medium mb-10">Our company offers free estimates and same-day service.</p>
+
+  <!-- Call and Book Buttons -->
+  <div class="flex flex-row justify-center gap-4">
+    <a
+      href="tel:727-327-7355"
+      class="flex items-center justify-center w-full md:w-1/4 lg:w-1/5 h-16 text-white text-lg lg:text-3xl font-semibold bg-[#08439d] hover:bg-[#08439d] rounded-lg"
+    >
+      Call Now: <br />727-327-7355
+    </a>
+    <a
+      href="https://book.housecallpro.com"
+      class="flex items-center justify-center w-full md:w-1/4 lg:w-1/5 h-16 text-white text-lg lg:text-3xl font-semibold bg-[#08439d] hover:bg-[#08439d] rounded-lg"
+    >
+      Book Online
+    </a>
   </div>
 
-  <p class="text-2xl text-black text-center mx-auto font-2xl font-semibold mt-10">OR</p>
+  <!-- Separator -->
+  <p class="text-2xl font-semibold mt-10">OR</p>
 
-  <div class="py-0 mt-10 text-white flex justify-center">
-   <!--Start of Housecallpro Lead Capture code--> <script async src="https://online-booking.housecallpro.com/script.js?token=e04a9346c2b64d92b5b0e60598d17b63&orgName=Farrell-Air-Conditioning"> </script> <iframe style="background-color: white;" id="hcp-lead-iframe" width="500px" src="https://book.housecallpro.com/lead-form/Farrell-Air-Conditioning/e04a9346c2b64d92b5b0e60598d17b63"></iframe> <!--End of Housecallpro Lead Capture code-->
+  <!-- Housecall Pro Lead Form Container -->
+  <div class="mt-10 flex justify-center" id="hcp-lead-container">
+    <!-- Fallback Message -->
+    <div id="hcp-fallback" class="hidden text-black text-center">
+      <p>
+        Unable to load booking form. Please call us at
+        <a href="tel:727-327-7355" class="underline">727-327-7355</a> or email us at
+        <a href="mailto:info@farrellair.com" class="underline">info@farrellair.com</a>.
+      </p>
+    </div>
   </div>
-  
 </section>
 
+<style>
+  #hcp-lead-iframe {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    border: 0;
+  }
+  #hcp-fallback {
+    max-width: 500px;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('hcp-lead-container');
+    const fallback = document.getElementById('hcp-fallback');
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Load Housecall Pro script
+            const script = document.createElement('script');
+            script.src =
+              'https://online-booking.housecallpro.com/script.js?token=e04a9346c2b64d92b5b0e60598d17b63&orgName=Farrell-Air-Conditioning';
+            script.async = true;
+            script.onerror = () => {
+              fallback.classList.remove('hidden'); // Show fallback on script error
+            };
+            document.body.appendChild(script);
+
+            // Load iframe
+            const iframe = document.createElement('iframe');
+            iframe.id = 'hcp-lead-iframe';
+            iframe.src =
+              'https://book.housecallpro.com/lead-form/Farrell-Air-Conditioning/e04a9346c2b64d92b5b0e60598d17b63';
+            iframe.title = 'Housecall Pro Booking Form';
+            iframe.onerror = () => {
+              fallback.classList.remove('hidden'); // Show fallback on iframe error
+            };
+            container.appendChild(iframe);
+
+            observer.unobserve(container); // Stop observing after loading
+          }
+        });
+      },
+      { rootMargin: '200px' } // Load 200px before section is visible
+    );
+
+    observer.observe(container);
+  });
+</script>
