@@ -17,7 +17,7 @@ const {
   description,
   keywords,
   canonical,
-  ogImage = "https://www.ryanshvac.com/og-default.jpg",
+  ogImage = "https://www.farrellac.com/images/favicon-32x32.png",
   url = canonical,
   extraSchema,
   City,
@@ -50,7 +50,7 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "HVACBusiness",
   "name": "Farrell Air Conditioning",
-  "image": "https://www.ryanshvac.com/images/logo.png",
+  "image": "https://www.farrellac.com/images/favicon-32x32.png",
   "url": url,
   "telephone": "+1-727-327-7355",
   "priceRange": "$$",
@@ -92,7 +92,7 @@ const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content={description} />
   {keywords && <meta name="keywords" content={keywords} />}
-  <meta name="author" content="Ryan's HVAC Solutions" />
+  <meta name="author" content="Farrell Air Conditioning Solutions" />
   <meta name="generator" content={Astro.generator} />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   {canonical && <link rel="canonical" href={canonical} />}
@@ -103,7 +103,7 @@ const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
   <meta property="og:image" content={ogImage} />
   {url && <meta property="og:url" content={url} />}
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ryan's HVAC" />
+  <meta property="og:site_name" content="Farrell Air Conditioning" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
