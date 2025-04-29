@@ -6,7 +6,7 @@ export interface Props {
   canonical?: string;
   ogImage?: string;
   url?: string;
-  extraSchema?: any; // optional additional schema for specific pages
+  extraSchema?: any;
   City?: string | string[];
   State?: string;
   services?: string[];
@@ -25,10 +25,8 @@ const {
   services
 } = Astro.props;
 
-// Normalize City to always be an array
 const cityList = Array.isArray(City) ? City : City ? [City] : [];
 
-// Generate areaServed array
 const areaServed = (cityList.length && State)
   ? cityList.map(city => ({
       "@type": "Place",
@@ -36,7 +34,6 @@ const areaServed = (cityList.length && State)
     }))
   : undefined;
 
-// Generate makesOffer array if services exist
 const makesOffer = services?.map(service => ({
   "@type": "Offer",
   "itemOffered": {
@@ -45,7 +42,6 @@ const makesOffer = services?.map(service => ({
   }
 }));
 
-// HVACBusiness Schema
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "HVACBusiness",
@@ -83,18 +79,17 @@ const businessSchema = {
   "description": description
 };
 
-// Merge optional extra schema
 const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
 ---
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
   {keywords && <meta name="keywords" content={keywords} />}
   <meta name="author" content="Farrell Air Conditioning Solutions" />
   <meta name="generator" content={Astro.generator} />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   {canonical && <link rel="canonical" href={canonical} />}
 
   <!-- Open Graph -->
@@ -112,9 +107,7 @@ const fullSchema = extraSchema ? [businessSchema, extraSchema] : businessSchema;
   <meta name="twitter:image" content={ogImage} />
 
   <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-    {JSON.stringify(fullSchema)}
-  </script>
+  <script type="application/ld+json" set:html={JSON.stringify(fullSchema)} />
 
   <title>{title}</title>
 </head>
