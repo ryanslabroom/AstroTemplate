@@ -54,4 +54,4 @@ It’s essentially a full system check to make sure everything is working the wa
 
 If it’s been a while since your last AC service, or if you’ve noticed any of the signs above, it’s a good idea to book a tune-up. Regular maintenance doesn’t take long, and it can save you from bigger problems down the road.
 
-Have questions or want to schedule a service? Our team at Cool Breeze HVAC is here to help.
+Have questions or want to schedule a service? Our team at Farrell Air Conditioning is here to help.
