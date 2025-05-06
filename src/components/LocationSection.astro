@@ -1,5 +1,5 @@
 ---
-const { HeaderOne, City, State, ParaOne, HeaderTwo, ParaTwo, LinkOne, LinkTwo } = Astro.props
+const { HeaderOne, City, State, ParaOne, HeaderTwo, ParaTwo, HeaderThree, ParaThree, LinkOne, LinkTwo } = Astro.props
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10">
@@ -20,6 +20,13 @@ const { HeaderOne, City, State, ParaOne, HeaderTwo, ParaTwo, LinkOne, LinkTwo } 
       <h2 class="text-4xl text-[#08439d] font-bold text-left mb-4">{HeaderTwo} in {City}, {State}</h2>
       <p class="text-xl leading-relaxed text-gray-700">
         {ParaTwo}
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-4xl text-[#08439d] font-bold text-left mb-4">{HeaderThree} in {City}, {State}</h2>
+      <p class="text-xl leading-relaxed text-gray-700">
+        {ParaThree}
       </p>
     </section>
 
