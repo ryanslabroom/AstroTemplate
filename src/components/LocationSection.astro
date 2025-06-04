@@ -8,8 +8,8 @@ const {
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 mx-auto my-10">
+  <!-- Text Content -->
   <div class="order-1 md:order-1 space-y-12">
-    
     <section>
       <h2 class="text-4xl text-[#08439d] font-bold text-left mb-4">{HeaderOne}</h2>
       <p class="text-xl leading-relaxed text-gray-700 mb-6">{ParaOne}</p>
@@ -27,19 +27,37 @@ const {
       <p class="text-xl leading-relaxed text-gray-700 mb-6">{ParaThree}</p>
       <p class="text-xl leading-relaxed text-gray-700">{ParaFour}</p>
     </section>
-
   </div>
 
+  <!-- Booking Widget -->
   <aside class="order-2 md:order-2 flex justify-center" aria-label="Booking Form">
-    <script async src="https://online-booking.housecallpro.com/script.js?token=e04a9346c2b64d92b5b0e60598d17b63&orgName=Farrell-Air-Conditioning"></script>
-    <iframe
-      loading="lazy"
-      style="background-color: white;"
-      id="hcp-lead-iframe"
-      width="500px"
-      src="https://book.housecallpro.com/lead-form/Farrell-Air-Conditioning/e04a9346c2b64d92b5b0e60598d17b63"
-    ></iframe>
-    
+    <div id="booking-placeholder" class="w-[500px] h-[400px] bg-white border border-gray-300 shadow-md flex items-center justify-center">
+      <button
+        onclick="loadBookingForm()"
+        class="text-[#08439d] font-semibold hover:underline text-lg"
+      >
+        Click to Book Now
+      </button>
+    </div>
+
+    <script is:inline>
+      function loadBookingForm() {
+        const container = document.getElementById('booking-placeholder');
+        container.innerHTML = `
+          <iframe
+            loading="lazy"
+            style="background-color: white;"
+            id="hcp-lead-iframe"
+            width="500px"
+            height="400px"
+            src="https://book.housecallpro.com/lead-form/Farrell-Air-Conditioning/e04a9346c2b64d92b5b0e60598d17b63"
+          ></iframe>
+        `;
+        const script = document.createElement('script');
+        script.src = "https://online-booking.housecallpro.com/script.js?token=e04a9346c2b64d92b5b0e60598d17b63&orgName=Farrell-Air-Conditioning";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    </script>
   </aside>
-  
 </div>
