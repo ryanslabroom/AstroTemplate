@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+import LocationHero from '../../components/LocationHero.astro';
+import Footer from '../../components/Footer.astro'
+import '@fontsource-variable/oswald';
+import LocationSection from '../../components/LocationSection.astro';
+import ServiceList from '../../components/ServiceList.astro';
+import ServiceHighlightHero from '../../components/ServiceHighlightHero.astro';
+import Promises from '../../components/Promises.astro';
+---
+
+<Layout>
+  <SEO 
+    slot="head"
+    title="Smart Thermostat Installation in Port Richey, FL | Farrell Air Conditioning"
+    description="Upgrade your comfort and cut energy costs with a smart thermostat. Farrell Air Conditioning's installs modern thermostats in Port Richey homes for better control and efficiency."
+    canonical="https://farrellac.com/services/smart-thermostat-installation"
+    ogImage="/images/FAC.png"
+    City="Port Richey"
+    State="FL"
+    services={["Smart Thermostat Installation", "Wi-Fi Thermostats"]}
+  />
+
+
+
+  <ServiceHighlightHero
+    HeroTitle="Smart Thermostat Installation"
+    HeroTitleTwo="for Smarter Comfort in Port Richey, FL"
+  />
+
+  <Promises/>
+
+ <LocationSection 
+  HeaderOne="Expert AC Installation Services in Port Richey, FL"
+  City="Port Richey"
+  State="FL"
+  ParaOne="Need to upgrade your home or business’s cooling system? Whether you’re replacing an outdated unit or installing central air for the first time, Farrell Air Conditioning is Port Richey’s trusted partner for expert AC installation services. Our certified technicians bring years of experience and ongoing training to every job. We stay ahead of industry standards with regular hands on training to ensure your system is installed efficiently, correctly, and built to last. Serving Port Richey and the surrounding Florida communities, Farrell Air Conditioning is known for dependable service and top tier workmanship. When you hire us, you’re getting more than just an install—you’re getting peace of mind backed by a local company that truly cares about your comfort and budget."
+  ParaSix="Call today or use our online form to schedule a free estimate. Our AC installation team will inspect your property, walk you through your options, and tailor a solution that fits your needs perfectly. We make the process smooth and stress free no guesswork, no upsells, just professional service done right. Whether you’re installing AC in a new build or replacing an aging unit, Farrell Air Conditioning delivers the results you need on time, on budget, and done right."
+
+  HeaderTwo="Residential & Commercial AC Installation"
+  ParaTwo="From single family homes to custom properties and commercial buildings, we’ve helped countless clients across Florida upgrade their air conditioning systems for better comfort, lower energy bills, and long term reliability. Our team will assess your space, review your existing system, and recommend the right solution based on your unique needs and usage goals. We handle everything from ductwork to permits to final setup, making sure the job gets done right the first time."
+  ParaFive="For business owners, we provide full scale commercial HVAC installation services. Whether it's a retail shop, office, or industrial facility, Farrell Air Conditioning delivers high efficiency cooling systems that are built to handle demanding spaces while keeping operating costs low. No matter the size or scope of your project, we offer honest recommendations, transparent pricing, and clean, timely installation."
+
+  HeaderThree="Cooling Solutions You Can Trust"
+  ParaThree="Farrell Air Conditioning doesn’t cut corners. Every install we perform is backed by licensed, insured professionals who take pride in doing the job right. We use industry-leading brands, energy-efficient systems, and offer extended warranties to give you peace of mind. We also provide ductless mini-split installations, smart thermostat integration, and routine maintenance plans to keep your AC running strong year round."
+  ParaFour="Our reputation is built on trust, transparency, and results. When you work with Farrell Air Conditioning, you’re not just another number, you’re our neighbor. Let us show you why homeowners and business owners across Port Richey count on us for expert AC installation services that actually live up to the hype."
+/>
+
+
+
+  <Footer/>
+</Layout>
